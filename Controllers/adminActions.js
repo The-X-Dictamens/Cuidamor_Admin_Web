@@ -36,8 +36,13 @@ exports.logout = async (req, res)=>{
 exports.getSolicitudes = async(req, res)=>{
 
     if(req.session.user){
-        let solicitudes = await query('SELECT e.id_emp, e.nom_emp, e.pat_emp, e.mat_emp, e.fot_emp, e.tel_emp, e.est_emp, da.* FROM empleado e JOIN datos_scceso da ON e.id_datacc = da.id_datacc;');
-        console.log(solicitudes);
+        try {
+            let solicitudes = await query('SELECT e.id_emp, e.nom_emp, e.pat_emp, e.mat_emp, e.fot_emp, e.tel_emp, e.est_emp, da.* FROM empleado e JOIN datos_scceso da ON e.id_datacc = da.id_datacc;');
+            res.render('soliEmpleados',{empleados:solicitudes});
+        } catch (error) {
+            console.error(error)
+        }
+        
         //res.render('soliEmpleados', {solicitudes: solicitudes});
     }else{
         res.redirect('/');

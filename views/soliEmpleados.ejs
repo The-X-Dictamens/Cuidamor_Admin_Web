@@ -70,6 +70,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
+                    <% empleados.forEach(empleado => { 
+                        if(empleado.est_emp == "Aceptado"){}else{%>
+                    <tr>
+                        
+                        <td><%= empleado.nom_emp  %></td>
+                        <td><%= empleado.pat_emp + " " + empleado.mat_emp%></td>
+                        <td><%= empleado.cor_datacc %></td>
+                        <td><%= empleado.tel_emp %></td>
+                        <td><%= empleado.est_emp%></td>
+                        <td><%= empleado.rol_datacc%></td>
+                        <td><a class="btn btn-info btn-sm" role="button" href="/solicitante/<%=empleado.id_emp%>">Ver más</a></td>
+                    </tr>
+                    <% }}); %>
                 </tbody>
             </table>
         </div>

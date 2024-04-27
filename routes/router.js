@@ -11,9 +11,7 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.get('/solicitudes',(req,res)=> {
-    res.render('soliEmpleados');
-})
+router.get('/solicitudes',adminActions.getSolicitudes);
 
 router.use(function(req, res, next) {
     res.status(404).render('catchError', {message: 'Página no encontrada'});
