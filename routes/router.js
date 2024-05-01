@@ -11,10 +11,14 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.get('/solicitudes',adminActions.getSolicitudes);
+
+router.get('/Empleadosenproceso',adminActions.getSolicitudProceso);
+
+router.post('/crearEmpleado',upload.fields([{name: 'comprobante_domicilio'},{name: 'ine'},{name:'certificados'}]),adminActions.crearEmpleado);
+
 
 router.use(function(req, res, next) {
-    res.status(404).render('catchError', {message: 'Página no encontrada'});
+    res.status(404).render('catchError', {message:'Página no encontrada'});
 });
 
 router.use(function(err, req, res, next){
@@ -23,7 +27,11 @@ router.use(function(err, req, res, next){
     res.status(err.status || 500);
     res.send(err.message);
     console.log(err);
-}); 
+});
+
+
+
+
 
 
 

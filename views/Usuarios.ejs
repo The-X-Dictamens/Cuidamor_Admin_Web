@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cuidamor</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap y otros recursos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Scripts para Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Cuidamor</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+        
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <!-- Elementos existentes -->
+    <li class="nav-item">
+      <a class="nav-link active" href="Usuarios.html">
+        <i class="bi bi-people"></i>
+        <span>Usuarios</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-layout-text-window-reverse"></i>
+        <span>Empleados</span>
+        <i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="tables-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="emple-proceso.html">
+            <i class="bi bi-circle"></i>
+            <span>Empleados en Proceso</span>
+          </a>
+        </li>
+        <li>
+          <a href="Emple-acep.html">
+            <i class="bi bi-circle"></i>
+            <span>Empleados Aceptados</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    
+    <!-- Nuevo elemento para Clientes -->
+    
+  </ul>
+</aside>
+
+  <main id="main" class="main">
+
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tablas </h5>
+              <p>Usuarios Ya registrados</p>
+              
+              <!-- Botón para abrir el modal -->
+              <div class="mb-3">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPersonModal">
+                  Agregar Usuario
+                </button>
+              </div>
+
+              <!-- Modal con pestañas para agregar persona -->
+              <div class="modal fade" id="addPersonModal" tabindex="-1" role="dialog" aria-labelledby="addPersonModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addPersonModalLabel">Agregar Empleado</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Pestañas para separar secciones -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#datos-personales" role="tab">Datos Personales</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#direccion" role="tab">Dirección</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#documentos" role="tab">Documentos</a>
+                        </li>
+                      </ul>
+
+                      <!-- Contenido de las pestañas -->
+                      <div class="tab-content">
+                        <!-- Pestaña de Datos Personales -->
+                        <div class="tab-pane active" id="datos-personales" role="tabpanel">
+                          <form id="formAgregarPersona" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label para="nombre">Nombre:</label>
+                              <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="form-group">
+                              <label para="apellido_paterno">Apellido Paterno:</label>
+                              <input type="text" class="form-control" id="apellido_paterno" required>
+                            </div>
+                            <div class="form-group">
+                              <label para="apellido_materno">Apellido Materno:</label>
+                              <input type="text" class="form-control" id="apellido_materno" required>
+                            </div>
+                            <div class="form-group">
+                              <label para="correo">Correo Electrónico:</label>
+                              <input type="email" class="form-control" id="correo" required>
+                            </div>
+                            <div class="form-group">
+                              <label para="numero_telefono">Número de Teléfono:</label>
+                              <input type="tel" class="form-control" id="numero_telefono" required>
+                            </div>
+                          </form>
+                        </div>
+                        
+                        <!-- Pestaña de Dirección -->
+                        <div class="tab-pane" id="direccion" role="tabpanel">
+                          <div class="form-group">
+                            <label para="calle">Calle:</label>
+                            <input type="text" class="form-control" id="calle" required>
+                          </div>
+                          <div class="form-group">
+                            <label para="colonia">Colonia:</label>
+                            <input type="text" class="form-control" id="colonia" required>
+                          </div>
+                          <div class="form-group">
+                            <label para="codigo_postal">Código Postal:</label>
+                            <input de tipo="text" class="form-control" id="codigo_postal" required>
+                          </div>
+                          <div class="form-group">
+                            <label para="alcaldia">Alcaldía:</label>
+                            <input de tipo="text" class="form-control" id="alcaldia" required>
+                          </div>
+                          <div class="form-group">
+                            <label para="comprobante_domicilio">Subir Comprobante de Domicilio:</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="comprobante_domicilio" required>
+                              <label class="custom-file-label" para="comprobante_domicilio">Seleccionar archivo</label>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Pestaña de Documentos -->
+                        <div class="tab-pane" id="documentos" role="tabpanel">
+                            <div class="form-group">
+                                <label for="ine">Subir INE:</label>
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="ine" required>
+                                  <label class="custom-file-label" for="ine">Seleccionar archivo</label>
+                                </div>
+                              </div>                              
+                            <div class="form-group">
+                              <label for="certificados">Subir Certificados:</label>
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="certificados" required>
+                                <label class="custom-file-label" for="certificados">Seleccionar archivo</label>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="cedula_profesional">Número de Cédula Profesional:</label>
+                              <input type="text" class="form-control" id="cedula_profesional" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="puesto">Tipo de Puesto:</label>
+                              <select class="form-control" id="puesto">
+                                <option value="cuidador">Cuidador</option>
+                                <option value="enfermero">Enfermero</option>
+                              </select>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary" onclick="agregarPersona()">Agregar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Número</th>
+                        <th>Documentos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Unity</td>
+                    <td>Pugh</td>
+                    <td>unity.pugh@example.com</td>
+                    <td>(555) 123-4567</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Theodore</td>
+                    <td>Duran</td>
+                    <td>theodore.duran@example.com</td>
+                    <td>(555) 987-6543</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Kylie</td>
+                    <td>Bishop</td>
+                    <td>kylie.bishop@example.com</td>
+                    <td>(555) 234-5678</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Willow</td>
+                    <td>Gilliam</td>
+                    <td>willow.gilliam@example.com</td>
+                    <td>(555) 345-6789</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Blossom</td>
+                    <td>Dickerson</td>
+                    <td>blossom.dickerson@example.com</td>
+                    <td>(555) 456-7890</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Elliott</td>
+                    <td>Snyder</td>
+                    <td>elliott.snyder@example.com</td>
+                    <td>(555) 567-8901</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Castor</td>
+                    <td>Pugh</td>
+                    <td>castor.pugh@example.com</td>
+                    <td>(555) 678-9012</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Pearl</td>
+                    <td>Carlson</td>
+                    <td>pearl.carlson@example.com</td>
+                    <td>(555) 789-0123</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Deirdre</td>
+                    <td>Bridges</td>
+                    <td>deirdre.bridges@example.com</td>
+                    <td>(555) 890-1234</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Daniel</td>
+                    <td>Baldwin</td>
+                    <td>daniel.baldwin@example.com</td>
+                    <td>(555) 901-2345</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Emily</td>
+                    <td>Rodriguez</td>
+                    <td>emily.rodriguez@example.com</td>
+                    <td>(555) 123-5678</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Michael</td>
+                    <td>Smith</td>
+                    <td>michael.smith@example.com</td>
+                    <td>(555) 234-6789</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Olivia</td>
+                    <td>Johnson</td>
+                    <td>olivia.johnson@example.com</td>
+                    <td>(555) 345-7890</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>William</td>
+                    <td>Brown</td>
+                    <td>william.brown@example.com</td>
+                    <td>(555) 456-8901</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Emma</td>
+                    <td>Jones</td>
+                    <td>emma.jones@example.com</td>
+                    <td>(555) 567-9012</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Lucas</td>
+                    <td>Garcia</td>
+                    <td>lucas.garcia@example.com</td>
+                    <td>(555) 678-0123</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Charlotte</td>
+                    <td>Miller</td>
+                    <td>charlotte.miller@example.com</td>
+                    <td>(555) 789-1234</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Alexander</td>
+                    <td>Martinez</td>
+                    <td>alexander.martinez@example.com</td>
+                    <td>(555) 890-2345</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>Sophia</td>
+                    <td>Davis</td>
+                    <td>sophia.davis@example.com</td>
+                    <td>(555) 901-3456</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                <tr>
+                    <td>David</td>
+                    <td>Anderson</td>
+                    <td>david.anderson@example.com</td>
+                    <td>(555) 012-4567</td>
+                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                </tr>
+                </tbody>
+            </table>
+            
+              <!-- End Table with stripped rows -->
+
+              
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
