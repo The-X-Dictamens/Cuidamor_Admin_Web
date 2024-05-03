@@ -118,10 +118,7 @@ exports.crearEmpleado = async (req, res) => {
 exports.verEmpleado = async (req, res) => {
     if (req.session.user) {
         try {
-
             let id = req.params.id;
-            
-            
             res.render("Empleado", { empleado: empleado });
 
         } catch (err) {

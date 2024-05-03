@@ -253,7 +253,7 @@
                   
                   <% empleados.forEach(function(empleado) { %>
                     
-                    <%if(empleado.est_emp == ''){>
+                    <% if(empleado.est_emp == 'Proceso'){ %>
                       <tr>
                         <td><%= empleado.nom_emp %></td>
                         <td><%= empleado.pat_emp + " " + empleado.mat_emp %></td>
