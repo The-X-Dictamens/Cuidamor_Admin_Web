@@ -2,6 +2,7 @@ const coneccion = require("./DBController");
 const { promisify } = require("util");
 const query = promisify(coneccion.query).bind(coneccion);
 const cloudController = require("./cloudController");
+const gmailController = require("./gmailcontroller");
 
 exports.login = async (req, res) => {
   try {
@@ -41,6 +42,21 @@ exports.getSolicitudProceso = async (req, res) => {
         "SELECT e.id_emp, e.nom_emp, e.pat_emp, e.mat_emp, e.fot_emp, e.tel_emp, e.est_emp, da.* FROM empleado e JOIN datos_acceso da ON e.id_datacc = da.id_datacc;"
       );
       res.render("Emple-proc", { empleados: empleados });
+    } catch (err) {
+        console.error(err)
+    }
+  } else {
+    res.redirect("/");
+  }
+};
+
+exports.getSolicitudAceptada = async (req, res) => {
+  if (req.session.user) {
+    try {
+      const empleados = await query(
+        "SELECT e.id_emp, e.nom_emp, e.pat_emp, e.mat_emp, e.fot_emp, e.tel_emp, e.est_emp, da.* FROM empleado e JOIN datos_acceso da ON e.id_datacc = da.id_datacc;"
+      );
+      res.render("Emple-acep", { empleados: empleados });
     } catch (err) {
         console.error(err)
     }
@@ -92,4 +108,29 @@ exports.crearEmpleado = async (req, res) => {
         res.redirect("/");
     }    
 };
+
+
+
+
+
+
+
+exports.verEmpleado = async (req, res) => {
+    if (req.session.user) {
+        try {
+
+            let id = req.params.id;
+            
+            
+            res.render("Empleado", { empleado: empleado });
+
+        } catch (err) {
+            console.error(err);
+        }
+    } else {
+        res.redirect("/");
+    }
+}
+
+
 

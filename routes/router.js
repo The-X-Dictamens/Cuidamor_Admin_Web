@@ -5,16 +5,27 @@ const upload = multer({ storage: multer.memoryStorage()});
 const adminActions = require('../Controllers/adminActions');
 
 
+
 router.post('/login',adminActions.login);
 
 router.get('/', (req, res) => {
     res.render('index');
 });
 
-
+//visualizar todos los empleaods en proceso
 router.get('/Empleadosenproceso',adminActions.getSolicitudProceso);
 
+//ruta de empleados apceptados
+router.get('/Empleadosaceptados',adminActions.getSolicitudAceptada);
+
+//captura de de informacion del formulario de agregar
 router.post('/crearEmpleado',upload.fields([{name: 'comprobante_domicilio'},{name: 'ine'},{name:'certificados'}]),adminActions.crearEmpleado);
+
+//visualizar la informacion del empleado
+router.get('/Empleado/:id',adminActions.verEmpleado);
+
+
+
 
 
 router.use(function(req, res, next) {
