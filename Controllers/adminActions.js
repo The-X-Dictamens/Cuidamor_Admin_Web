@@ -119,7 +119,22 @@ exports.verEmpleado = async (req, res) => {
     if (req.session.user) {
         try {
             let id = req.params.id;
-            res.render("Empleado", { empleado: empleado });
+            let empleado = await query("SELECT e.id_emp, e.nom_emp, e.pat_emp, e.mat_emp, e.fot_emp, e.tel_emp, e.est_emp, da.*, d.* FROM empleado e JOIN datos_acceso da ON e.id_datacc = da.id_datacc JOIN direccion d ON e.id_dir = d.id_dir WHERE e.id_emp = ?", [id]);
+            let perfil = await query("SELECT * FROM perfil_profecional WHERE id_emp = ?", [id]);
+            console.log(empleado);
+
+            //urls de las fotos de los documenstos
+            let comprobante = await cloudController.getUrl(perfil[0].comdom_prof);
+            let ine = await cloudController.getUrl(perfil[0].ine_prof);
+            let certificados = await cloudController.getUrl(perfil[0].cert_prof);
+
+            let documentos = {comprobante,ine,certificados};
+
+            console.log(documentos);
+
+
+
+            res.render("Empleado", { empleado: empleado, documentos: documentos});
 
         } catch (err) {
             console.error(err);

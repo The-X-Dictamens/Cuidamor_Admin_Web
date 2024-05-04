@@ -104,8 +104,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Tablas </h5>
-              <p>Empleados que ya fueron Aceptados</p>
+              <h5 class="card-title"> Empleados Aceptados </h5>
               
               <!-- Botón para abrir el modal -->
               <div class="mb-3">
@@ -117,120 +116,127 @@
               <!-- Modal con pestañas para agregar persona -->
               <div class="modal fade" id="addPersonModal" tabindex="-1" role="dialog" aria-labelledby="addPersonModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="addPersonModalLabel">Agregar Empleado</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <!-- Pestañas para separar secciones -->
-                      <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#datos-personales" role="tab">Datos Personales</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#direccion" role="tab">Dirección</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#documentos" role="tab">Documentos</a>
-                        </li>
-                      </ul>
 
-                      <!-- Contenido de las pestañas -->
-                      <div class="tab-content">
-                        <!-- Pestaña de Datos Personales -->
-                        <div class="tab-pane active" id="datos-personales" role="tabpanel">
-                          <form id="formAgregarPersona" enctype="multipart/form-data">
-                            <div class="form-group">
-                              <label para="nombre">Nombre:</label>
-                              <input type="text" class="form-control" id="nombre" required>
-                            </div>
-                            <div class="form-group">
-                              <label para="apellido_paterno">Apellido Paterno:</label>
-                              <input type="text" class="form-control" id="apellido_paterno" required>
-                            </div>
-                            <div class="form-group">
-                              <label para="apellido_materno">Apellido Materno:</label>
-                              <input type="text" class="form-control" id="apellido_materno" required>
-                            </div>
-                            <div class="form-group">
-                              <label para="correo">Correo Electrónico:</label>
-                              <input type="email" class="form-control" id="correo" required>
-                            </div>
-                            <div class="form-group">
-                              <label para="numero_telefono">Número de Teléfono:</label>
-                              <input type="tel" class="form-control" id="numero_telefono" required>
-                            </div>
-                          </form>
-                        </div>
-                        
-                        <!-- Pestaña de Dirección -->
-                        <div class="tab-pane" id="direccion" role="tabpanel">
-                          <div class="form-group">
-                            <label para="calle">Calle:</label>
-                            <input type="text" class="form-control" id="calle" required>
-                          </div>
-                          <div class="form-group">
-                            <label para="colonia">Colonia:</label>
-                            <input type="text" class="form-control" id="colonia" required>
-                          </div>
-                          <div class="form-group">
-                            <label para="codigo_postal">Código Postal:</label>
-                            <input de tipo="text" class="form-control" id="codigo_postal" required>
-                          </div>
-                          <div class="form-group">
-                            <label para="alcaldia">Alcaldía:</label>
-                            <input de tipo="text" class="form-control" id="alcaldia" required>
-                          </div>
-                          <div class="form-group">
-                            <label para="comprobante_domicilio">Subir Comprobante de Domicilio:</label>
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="comprobante_domicilio" required>
-                              <label class="custom-file-label" para="comprobante_domicilio">Seleccionar archivo</label>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <!-- Pestaña de Documentos -->
-                        <div class="tab-pane" id="documentos" role="tabpanel">
-                            <div class="form-group">
-                                <label for="ine">Subir INE:</label>
-                                <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="ine" required>
-                                  <label class="custom-file-label" for="ine">Seleccionar archivo</label>
+                  <form id="formAgregarPersona"  action="/crearEmpleado" method="post" enctype="multipart/form-data">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="addPersonModalLabel">Agregar Empleado</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <div class="modal-body">
+                        <!-- Pestañas para separar secciones -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#datos-personales" role="tab">Datos Personales</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#direccion" role="tab">Dirección</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#documentos" role="tab">Documentos</a>
+                          </li>
+                        </ul>
+
+                        <!-- Contenido de las pestañas -->
+                        <div class="tab-content">
+                          
+                          <!-- Pestaña de Datos Personales -->
+                            <div class="tab-pane active" id="datos-personales" role="tabpanel">
+                              
+                                <div class="form-group">
+                                  <label para="nombre">Nombre:</label>
+                                  <input type="text" name="nombre" class="form-control" id="nombre" required>
                                 </div>
-                              </div>                              
-                            <div class="form-group">
-                              <label for="certificados">Subir Certificados:</label>
-                              <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="certificados" required>
-                                <label class="custom-file-label" for="certificados">Seleccionar archivo</label>
+                                <div class="form-group">
+                                  <label para="apellido_paterno">Apellido Paterno:</label>
+                                  <input type="text" name="apellido_paterno" class="form-control" id="apellido_paterno" required>
+                                </div>
+                                <div class="form-group">
+                                  <label para="apellido_materno">Apellido Materno:</label>
+                                  <input type="text" name="apellido_materno" class="form-control" id="apellido_materno" required>
+                                </div>
+                                <div class="form-group">
+                                  <label para="correo">Correo Electrónico:</label>
+                                  <input type="email" name="correo" class="form-control" id="correo" required>
+                                </div>
+                                <div class="form-group">
+                                  <label para="numero_telefono">Número de Teléfono:</label>
+                                  <input type="tel" name="numero_telefono" class="form-control" id="numero_telefono" required>
+                                </div>
+                              
+                            </div>
+                            
+                            <!-- Pestaña de Dirección -->
+                            <div class="tab-pane" id="direccion" role="tabpanel">
+                              <div class="form-group">
+                                <label para="calle">Calle:</label>
+                                <input type="text" name="calle" class="form-control" id="calle" required>
+                              </div>
+                              <div class="form-group">
+                                <label para="colonia">Colonia:</label>
+                                <input type="text" name="colonia" class="form-control" id="colonia" required>
+                              </div>
+                              <div class="form-group">
+                                <label para="codigo_postal">Código Postal:</label>
+                                <input type="text" name="codigo_postal"  class="form-control" id="codigo_postal" required>
+                              </div>
+                              <div class="form-group">
+                                <label para="alcaldia">Alcaldía:</label>
+                                <input type="text" name="alcaldia" class="form-control" id="alcaldia" required>
+                              </div>
+                              <div class="form-group">
+                                <label para="comprobante_domicilio">Subir Comprobante de Domicilio:</label>
+                                <div class="custom-file">
+                                  <input name="comprobante_domicilio" type="file" class="custom-file-input" id="comprobante_domicilio" required>
+                                  <label class="custom-file-label" para="comprobante_domicilio">Seleccionar archivo</label>
+                                </div>
                               </div>
                             </div>
-                            <div class="form-group">
-                              <label for="cedula_profesional">Número de Cédula Profesional:</label>
-                              <input type="text" class="form-control" id="cedula_profesional" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="puesto">Tipo de Puesto:</label>
-                              <select class="form-control" id="puesto">
-                                <option value="cuidador">Cuidador</option>
-                                <option value="enfermero">Enfermero</option>
-                              </select>
-                            </div>
-                          </div>
+                            
+                            <!-- Pestaña de Documentos -->
+                            <div class="tab-pane" id="documentos" role="tabpanel">
+                                <div class="form-group">
+                                    <label for="ine">Subir INE:</label>
+                                    <div class="custom-file">
+                                      <input name="ine" type="file" class="custom-file-input" id="ine" required>
+                                      <label class="custom-file-label" for="ine">Seleccionar archivo</label>
+                                    </div>
+                                  </div>                              
+                                <div class="form-group">
+                                  <label for="certificados">Subir Certificados:</label>
+                                  <div class="custom-file">
+                                    <input name="certificados" type="file" class="custom-file-input" id="certificados" required>
+                                    <label class="custom-file-label" for="certificados">Seleccionar archivo</label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="cedula_profesional">Número de Cédula Profesional:</label>
+                                  <input type="number" name="cedula_profesional" class="form-control" id="cedula_profesional" required>
+                                </div>
+                                <div class="form-group">
+                                  <label for="puesto">Tipo de Puesto:</label>
+                                  <select class="form-control" name="puesto" id="puesto">
+                                    <option value="cuidador" id="cuidador" name="cuidador">Cuidador</option>
+                                    <option value="enfermero" id="enfermero" name="enfermero" >Enfermero</option>
+                                  </select>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+
                       </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary" onclick="agregarPersona()">Agregar</button>
-                    </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary" >Agregar</button>
+                      </div>
+                    </form>
+                  <!--  ----------------------------------------------------------------------  -->
                   </div>
                 </div>
               </div>
-
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
@@ -243,7 +249,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                  <% empleados.forEach(function(empleado) { %>
+                    
+                    <% if(empleado.est_emp == 'Aceptado'){ %>
+                      <tr>
+                        <td><%= empleado.nom_emp %></td>
+                        <td><%= empleado.pat_emp + " " + empleado.mat_emp %></td>
+                        <td><%= empleado.cor_datacc %></td>
+                        <td><%= empleado.tel_emp %></td>
+                        <td class="text-center"><a href="/Empleado/<%= empleado.id_emp %>" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                      </tr>
+                    <% } %>
                   
+                  <% }); %>
                 </tbody>
             </table>
             

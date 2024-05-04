@@ -51,7 +51,7 @@ exports.delete = async function borrarArchivo(name){
 
 
 
-exports.geturl = async function obtenerEnlacePublico(name) {
+exports.getUrl = async function obtenerEnlacePublico(name) {
     try {
       // Generar un enlace de acceso público al archivo
       const [url] = await bucket.file(name).getSignedUrl({
@@ -59,7 +59,7 @@ exports.geturl = async function obtenerEnlacePublico(name) {
         expires: Date.now() + 15 * 60 * 1000, // Caducidad del enlace (en este caso, 15 minutos)
       });
   
-      console.log('Enlace de acceso público al archivo:', url);
+      //console.log('Enlace de acceso público al archivo:', url);
       return url;
     } catch (error) {
       console.error('Error al obtener el enlace de acceso público:', error);
