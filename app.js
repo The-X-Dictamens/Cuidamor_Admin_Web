@@ -31,6 +31,20 @@ app.use(
 app.use('/',require('./routes/router'));
 
 
+//Enfermera
+app.use('/', require('./routes/routerEnfermera'))
+
+//Usuario
+app.use('/', require('./routes/routerUsuario'))
+
+//Cuidador
+app.use('/', require('./routes/routerCuidador'))
+
+//Paciente
+app.use('/', require('./routes/routerPaciente'))
+
+
+
 
 app.use(function(req, res, next) {
     if (!req.user)
