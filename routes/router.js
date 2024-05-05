@@ -22,7 +22,7 @@ router.get('/Empleadosaceptados',adminActions.getSolicitudAceptada);
 router.post('/crearEmpleado',upload.fields([{name: 'comprobante_domicilio'},{name: 'ine'},{name:'certificados'}]),adminActions.crearEmpleado);
 
 //visualizar la informacion del empleado
-router.get('/Empleado/:id',adminActions.verEmpleado);
+router.get('/Empleado',adminActions.verEmpleado);
 
 
 
