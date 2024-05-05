@@ -76,11 +76,11 @@ exports.crearEmpleado = async (req, res) => {
 
             //obtencion de los los carchivos y sus nombres
             let comprobante_domicilio = req.files["comprobante_domicilio"][0];
-            var namecomuser = comprobante_domicilio.fieldname + "-" + idDataAcces;
+            var namecomuser = comprobante_domicilio.fieldname + "-" + idDataAcces + "." + comprobante_domicilio.originalname.split(".").pop();
             let ine = req.files["ine"][0];
-            var nameineuser = ine.fieldname + "-" + idDataAcces;
+            var nameineuser = ine.fieldname + "-" + idDataAcces + "." + ine.originalname.split(".").pop();
             let certificados = req.files["certificados"][0];
-            var nameceruser = certificados.fieldname + "-" + idDataAcces;
+            var nameceruser = certificados.fieldname + "-" + idDataAcces + "." + certificados.originalname.split(".").pop();
 
             //utilizaremos la funcion de gardado de documentos en los dockers
             let subrcomprobante = cloudController.upload(comprobante_domicilio, namecomuser);
