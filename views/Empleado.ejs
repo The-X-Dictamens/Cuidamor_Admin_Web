@@ -8,7 +8,7 @@
 <body>
 
     
-    <h1>Empleado en <%= empleado[0].est_emp%></h1>
+    <h1>Empleado en estatus de <%= empleado[0].est_emp%></h1>
     <h3>Datos personales</h3>
 
     <p>Nombre: <%= empleado[0].nom_emp %></p>
@@ -26,26 +26,99 @@
     <h3>Documentos:</h3>
 
 
-
-    <a href="<%= documentos.ine%>">
+    <div>
+        <h4>ine</h4>
         <iframe src="<%= documentos.ine%>"></iframe>
-    </a>
 
-    <a href="<%= documentos.certificados%>">
+        <%if(documentos.ine != null){%>
+            <a href="/EliminarDoc?id=<%=empleado[0].id_emp%>&doc=ine" > 
+                <button>Eliminar</button> 
+            </a>
+        <%} %>
+
+
+        <%if(documentos.ine == null){%>
+            
+            <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=ine" method="post" enctype="multipart/form-data">
+                <input type="file" name="documento">
+                <button type="submit">Subir</button>
+            </form>
+
+        <%}%>
+
+
+    </div>
+
+    
+    <div>
+        <h4>Certificados</h4>
         <iframe src="<%= documentos.certificados%>"></iframe>
-    </a>
 
-    <a href="<%= documentos.comprobante%>">
+        <%if(documentos.certificados != null){%>
+            <a href="/EliminarDoc?id=<%=empleado[0].id_emp%>&doc=certificados" > 
+                <button>Eliminar</button> 
+            </a>
+        <%} %>
+
+        <%if(documentos.certificados == null){%>
+            
+            <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=certificados" method="post" enctype="multipart/form-data">
+                <input type="file" name="documento">
+                <button type="submit">Subir</button>
+            </form>
+
+        <%}%>
+
+
+    </div>
+
+    <div>
+        <h4>Comprobante de domicilio</h4>
         <iframe src="<%= documentos.comprobante%>"></iframe>
-    </a>
+
+        <%if(documentos.comprobante != null){%>
+            <a href="/EliminarDoc?id=<%=empleado[0].id_emp%> &doc=comprobante" > 
+                <button>Eliminar</button> 
+            </a>
+        <%} %>
+
+        <%if(documentos.comprobante == null){%>
+            
+            <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=comprobante" method="post" enctype="multipart/form-data">
+                <input type="file" name="documento">
+                <button type="submit">Subir</button>
+            </form>
+
+        <%}%>
+
+    </div>
+
+
+    <div>
+        
+
+        <%if(empleado[0].est_emp == "Proceso"){%>
+            <a href="/AceptarEmpleado?id=<%=empleado[0].id_emp%>"> 
+                <button>Aceptar</button>
+            </a>
+            <a href="/RechazarEmpleado?id=<%=empleado[0].id_emp%>">
+                <button>Rechazar</button> 
+            </a>
+        <%}%>
 
 
 
+        <%if(empleado[0].est_emp == "Aceptado" || empleado[0].est_emp == "Rechazado"){%>
+            <a href="/ProcesarEmpleado?id=<%=empleado[0].id_emp%>"> 
+                <button>Procesar</button>
+            </a>
+        <%}%>
+
+        
+
+        
+    </div>
 
 
-    
-
-
-    
 </body>
 </html>

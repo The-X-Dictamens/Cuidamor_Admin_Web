@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Cuidamor</title>
+  <title>Tables / Data - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,6 +46,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -62,6 +63,7 @@
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
+
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
@@ -72,14 +74,13 @@
           <span>Usuarios</span>
         </a>
       </li><!-- End Dashboard Nav -->
-      
       <li class="nav-item">
         <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/Empleadosenproceso" class="active">
+            <a href="/Empleadosenproceso" >
               <i class="bi bi-circle"></i><span>Empleados en proceso</span>
             </a>
           </li>
@@ -89,12 +90,13 @@
             </a>
           </li>
           <li>
-            <a href="/Empleadosrechazado" >
+            <a href="/Empleadosrechazado" class="active">
               <i class="bi bi-circle"></i><span>Empleadoa Rechazados</span>
             </a>
           </li>
         </ul>
       </li><!-- End Tables Nav -->
+
 
   </aside><!-- End Sidebar-->
 
@@ -107,15 +109,14 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Solicitudes de Empleados</h5>
-              <p></p>
+              <h5 class="card-title"> Empleados Aceptados </h5>
               
               <!-- Botón para abrir el modal -->
-              <div class="d-flex justify-content-start mb-3">
+              <div class="mb-3">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPersonModal">
                   Agregar Empleado
                 </button>
-              </div>                                         
+              </div>
 
               <!-- Modal con pestañas para agregar persona -->
               <div class="modal fade" id="addPersonModal" tabindex="-1" role="dialog" aria-labelledby="addPersonModalLabel" aria-hidden="true">
@@ -241,9 +242,8 @@
                   </div>
                 </div>
               </div>
-
               <!-- Table with stripped rows -->
-              <table class="table datatable ">
+              <table class="table datatable">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -253,12 +253,10 @@
                         <th>Documentos</th>
                     </tr>
                 </thead>
-                
                 <tbody>
-                  
                   <% empleados.forEach(function(empleado) { %>
                     
-                    <% if(empleado.est_emp == 'Proceso'){ %>
+                    <% if(empleado.est_emp == 'Rechazado'){ %>
                       <tr>
                         <td><%= empleado.nom_emp %></td>
                         <td><%= empleado.pat_emp + " " + empleado.mat_emp %></td>
@@ -267,10 +265,12 @@
                         <td class="text-center"><a href="/Empleado?id=<%= empleado.id_emp %>" class="btn btn-outline-primary btn-sm">Ver más</a></td>
                       </tr>
                     <% } %>
+
+                
+
+
                   
                   <% }); %>
-                    
-                
                 </tbody>
             </table>
             
@@ -286,10 +286,11 @@
     </section>
 
   </main><!-- End #main -->
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     
-    
+   
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -306,10 +307,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
 
 <!-- Code injected by live-server -->
-
 
 </body>
 
