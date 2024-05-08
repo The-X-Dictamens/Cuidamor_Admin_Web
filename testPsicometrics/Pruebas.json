@@ -1,0 +1,54 @@
+{
+    "pruebas": [
+      {
+        "nombre": "Prueba de Aptitud para Enfermería",
+        "instrucciones": "Esta prueba evalúa tus habilidades y conocimientos relacionados con el campo de la enfermería. Lee cada pregunta cuidadosamente y elige la opción que consideres más apropiada. Cada respuesta tiene un puntaje asignado. ¡Buena suerte!",
+        "preguntas": [
+          {
+            "pregunta": "¿Cuál es la función principal de un enfermero/a?",
+            "respuestas": [
+              { "id": 1, "respuesta": "Proporcionar cuidados médicos", "puntaje": 1 },
+              { "id": 1, "respuesta": "Administrar medicamentos", "puntaje": 2 },
+              { "id": 1, "respuesta": "Brindar atención y cuidado a los pacientes", "puntaje": 3 },
+              { "id": 1, "respuesta": "Realizar cirugías", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "¿Qué es la higiene hospitalaria?",
+            "respuestas": [
+              { "id": 2, "respuesta": "El proceso de mantener limpios los equipos médicos", "puntaje": 1 },
+              { "id": 2, "respuesta": "El conjunto de procedimientos para mantener la limpieza y seguridad en un hospital", "puntaje": 2 },
+              { "id": 2, "respuesta": "La atención médica en caso de emergencias", "puntaje": 3 },
+              { "id": 2, "respuesta": "La administración de medicamentos a los pacientes", "puntaje": 4 }
+            ]
+          }
+        ],
+        "reglas_aceptacion": [{ "PuntajeMin": 5 }]
+      },
+      {
+        "nombre": "Prueba de Habilidades Sociales",
+        "instrucciones": "Esta prueba evalúa tus habilidades para interactuar con los demás en un entorno profesional. Lee cada pregunta cuidadosamente y elige la opción que consideres más apropiada. Cada respuesta tiene un puntaje asignado. ¡Buena suerte!",
+        "preguntas": [
+          {
+            "pregunta": "¿Cómo reaccionarías ante un conflicto en el lugar de trabajo?",
+            "respuestas": [
+              { "id": 1, "respuesta": "Evitaría el conflicto a toda costa", "puntaje": 1 },
+              { "id": 1, "respuesta": "Trataría de resolver el conflicto de manera diplomática", "puntaje": 2 },
+              { "id": 1, "respuesta": "Ignoraría el conflicto y continuaría con mi trabajo", "puntaje": 3 }
+            ]
+          },
+          {
+            "pregunta": "¿Cómo te comunicarías con un paciente nervioso o ansioso?",
+            "respuestas": [
+              { "id": 2, "respuesta": "De manera brusca para que entienda quién está a cargo", "puntaje": 1 },
+              { "id": 2, "respuesta": "Con empatía y comprensión para calmar sus nervios", "puntaje": 2 },
+              { "id": 2, "respuesta": "Ignorando sus preocupaciones y continuando con el procedimiento", "puntaje": 3 },
+              { "id": 2, "respuesta": "Dándole órdenes claras y precisas para que se calme", "puntaje": 4 }
+            ]
+          }
+        ],
+        "reglas_aceptacion": [{ "PuntajeMin": 5 }]
+      }
+    ]
+  }
+  

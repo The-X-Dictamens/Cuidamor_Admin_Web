@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const upload = multer({ storage: multer.memoryStorage()});
 const adminActions = require('../Controllers/adminActions');
+const TestPsycometricController = require('../Controllers/TestPsycometricController');
 
 
 
@@ -41,6 +42,12 @@ router.get('/AceptarEmpleado',adminActions.aceptarSolicitud);
 
 //procesar solicitud
 router.get('/ProcesarEmpleado',adminActions.procesarSolicitud);
+
+//pruebas psicometricas
+router.get('/aplicarPrueba',TestPsycometricController.getPrueba);
+
+//ruta para obtener resultados de prueba psicometrica
+router.post('/enviarResultados',TestPsycometricController.getResultados);
 
 
 
