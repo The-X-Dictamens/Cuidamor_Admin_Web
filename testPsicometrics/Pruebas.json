@@ -1,8 +1,552 @@
 {
     "pruebas": [
       {
-        "nombre": "Prueba de Aptitud para Enfermería",
-        "instrucciones": "Esta prueba evalúa tus habilidades y conocimientos relacionados con el campo de la enfermería. Lee cada pregunta cuidadosamente y elige la opción que consideres más apropiada. Cada respuesta tiene un puntaje asignado. ¡Buena suerte!",
+        "nombre": "Examen Psicométrico para Enfermería y Cuidado",
+        "instrucciones": "Este examen evalúa tus aptitudes y competencias clave para el puesto de enfermería o cuidador. Responde a cada pregunta honestamente, eligiendo la opción que mejor refleje tu comportamiento o pensamiento. ¡Buena suerte!",
+        "preguntas": [
+          {
+            "pregunta": "1. ¿Cómo te sientes al cuidar de personas enfermas o heridas?",
+            "respuestas": [
+              { "id": 1, "respuesta": "Me siento incómodo/a y prefiero evitarlo", "puntaje": 1 },
+              { "id": 1, "respuesta": "Me resulta difícil, pero trato de hacerlo lo mejor posible", "puntaje": 2 },
+              { "id": 1, "respuesta": "Me siento cómodo/a y disfruto ayudando a los demás", "puntaje": 3 },
+              { "id": 1, "respuesta": "Es algo que me apasiona y me da mucha satisfacción", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "2. ¿Cómo manejas situaciones de estrés en el trabajo?",
+            "respuestas": [
+              { "id": 2, "respuesta": "Me pongo muy ansioso/a y me cuesta concentrarme", "puntaje": 1 },
+              { "id": 2, "respuesta": "Intento mantener la calma, aunque a veces me siento abrumado/a", "puntaje": 2 },
+              { "id": 2, "respuesta": "Mantengo la calma y busco soluciones prácticas", "puntaje": 3 },
+              { "id": 2, "respuesta": "Florezco en situaciones de alta presión y me mantengo enfocado/a", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "3. ¿Qué tan importante es para ti trabajar en equipo?",
+            "respuestas": [
+              { "id": 3, "respuesta": "Prefiero trabajar solo/a y evitar la colaboración", "puntaje": 1 },
+              { "id": 3, "respuesta": "No me importa trabajar en equipo, pero no lo prefiero", "puntaje": 2 },
+              { "id": 3, "respuesta": "Disfruto trabajar en equipo y creo que es importante", "puntaje": 3 },
+              { "id": 3, "respuesta": "Trabajar en equipo es esencial y me motiva mucho", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "4. ¿Qué harías si un paciente se niega a tomar su medicación?",
+            "respuestas": [
+              { "id": 4, "respuesta": "Lo forzaría a tomarla porque es lo mejor para su salud", "puntaje": 1 },
+              { "id": 4, "respuesta": "Ignoraría la negativa y reportaría el incidente al médico", "puntaje": 2 },
+              { "id": 4, "respuesta": "Intentaría hablar con el paciente para entender sus razones", "puntaje": 3 },
+              { "id": 4, "respuesta": "Respetaría su decisión, explicándole las consecuencias y consultaría con el médico", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "5. ¿Cómo lidias con el comportamiento difícil de los pacientes?",
+            "respuestas": [
+              { "id": 5, "respuesta": "Me frustro y tiendo a evitar el contacto con ellos", "puntaje": 1 },
+              { "id": 5, "respuesta": "Trato de mantenerme profesional, aunque es difícil", "puntaje": 2 },
+              { "id": 5, "respuesta": "Me esfuerzo por entender la causa del comportamiento y actuar en consecuencia", "puntaje": 3 },
+              { "id": 5, "respuesta": "Me mantengo calmado/a y utilizo técnicas de desescalada", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "6. ¿Cómo te aseguras de seguir los protocolos y procedimientos médicos?",
+            "respuestas": [
+              { "id": 6, "respuesta": "A veces improviso según la situación", "puntaje": 1 },
+              { "id": 6, "respuesta": "Sigo los protocolos cuando me acuerdo de ellos", "puntaje": 2 },
+              { "id": 6, "respuesta": "Reviso los protocolos regularmente para asegurarme de cumplirlos", "puntaje": 3 },
+              { "id": 6, "respuesta": "Siempre sigo estrictamente los protocolos y procedimientos establecidos", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "7. ¿Qué importancia le das a la empatía en tu trabajo?",
+            "respuestas": [
+              { "id": 7, "respuesta": "No es muy importante, prefiero centrarme en los aspectos técnicos", "puntaje": 1 },
+              { "id": 7, "respuesta": "Es algo importante, pero no siempre es necesario", "puntaje": 2 },
+              { "id": 7, "respuesta": "Es muy importante para mí y trato de mostrar empatía siempre", "puntaje": 3 },
+              { "id": 7, "respuesta": "Es fundamental y trato de ponerme en el lugar del paciente en todo momento", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "8. ¿Cómo reaccionas ante un error cometido por ti o por un colega?",
+            "respuestas": [
+              { "id": 8, "respuesta": "Trato de ocultarlo para evitar problemas", "puntaje": 1 },
+              { "id": 8, "respuesta": "Me siento muy mal pero no sé cómo abordarlo", "puntaje": 2 },
+              { "id": 8, "respuesta": "Lo reconozco y busco soluciones para corregirlo", "puntaje": 3 },
+              { "id": 8, "respuesta": "Informo inmediatamente y aprendo del error para evitarlo en el futuro", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "9. ¿Cómo manejas las críticas constructivas sobre tu desempeño laboral?",
+            "respuestas": [
+              { "id": 9, "respuesta": "Me siento ofendido/a y las ignoro", "puntaje": 1 },
+              { "id": 9, "respuesta": "Me afectan mucho, pero trato de mejorar", "puntaje": 2 },
+              { "id": 9, "respuesta": "Las acepto y las uso para mejorar mi desempeño", "puntaje": 3 },
+              { "id": 9, "respuesta": "Las busco activamente y las aprecio como una oportunidad de crecimiento", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "10. ¿Qué harías si presencias una mala práctica profesional por parte de un colega?",
+            "respuestas": [
+              { "id": 10, "respuesta": "No haría nada para evitar conflictos", "puntaje": 1 },
+              { "id": 10, "respuesta": "Hablaría con el colega en privado", "puntaje": 2 },
+              { "id": 10, "respuesta": "Informaría al supervisor para que tome las medidas necesarias", "puntaje": 3 },
+              { "id": 10, "respuesta": "Lo reportaría inmediatamente siguiendo el protocolo de la institución", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "11. ¿Cómo manejas situaciones en las que un paciente muestra agresividad verbal?",
+            "respuestas": [
+              { "id": 11, "respuesta": "Respondo con agresividad para establecer autoridad", "puntaje": 1 },
+              { "id": 11, "respuesta": "Me mantengo callado/a y evito el conflicto", "puntaje": 2 },
+              { "id": 11, "respuesta": "Escucho al paciente y trato de calmarlo/a", "puntaje": 3 },
+              { "id": 11, "respuesta": "Uso técnicas de comunicación para desescalar la situación", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "12. ¿Qué tan importante es para ti mantener una comunicación abierta con los pacientes?",
+            "respuestas": [
+              { "id": 12, "respuesta": "No es importante, prefiero mantener la distancia profesional", "puntaje": 1 },
+              { "id": 12, "respuesta": "Es algo importante, pero no siempre es posible", "puntaje": 2 },
+              { "id": 12, "respuesta": "Es muy importante y trato de ser accesible", "puntaje": 3 },
+              { "id": 12, "respuesta": "Es esencial para el cuidado efectivo del paciente", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "13. ¿Qué harías si un familiar del paciente te pide información confidencial?",
+            "respuestas": [
+              { "id": 13, "respuesta": "Le daría la información para evitar conflictos", "puntaje": 1 },
+              { "id": 13, "respuesta": "Le daría información parcial para calmarlo/a", "puntaje": 2 },
+              { "id": 13, "respuesta": "Le explicaría que no puedo proporcionar información confidencial", "puntaje": 3 },
+              { "id": 13, "respuesta": "Le redirigiría a la persona autorizada para manejar esa información", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "14. ¿Cómo te aseguras de actualizar tus conocimientos y habilidades profesionales?",
+            "respuestas": [
+              { "id": 14, "respuesta": "No considero importante seguir actualizando mis conocimientos", "puntaje": 1 },
+              { "id": 14, "respuesta": "Solo asisto a las capacitaciones obligatorias", "puntaje": 2 },
+              { "id": 14, "respuesta": "Busco regularmente cursos y talleres para mejorar mis habilidades", "puntaje": 3 },
+              { "id": 14, "respuesta": "Estoy continuamente buscando oportunidades de aprendizaje y desarrollo", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "15. ¿Cómo manejas la presión de cumplir con múltiples tareas en un turno ocupado?",
+            "respuestas": [
+              { "id": 15, "respuesta": "Me estreso mucho y no logro completar las tareas", "puntaje": 1 },
+              { "id": 15, "respuesta": "Intento manejar la presión, pero a veces no puedo cumplir con todo", "puntaje": 2 },
+              { "id": 15, "respuesta": "Priorizo las tareas y me enfoco en completarlas eficientemente", "puntaje": 3 },
+              { "id": 15, "respuesta": "Utilizo técnicas de gestión del tiempo para asegurarme de cumplir con todo", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "16. ¿Qué harías si un paciente se queja de dolor persistente y no está en tu capacidad inmediata ayudarle?",
+            "respuestas": [
+              { "id": 16, "respuesta": "Le diría que espere hasta que pueda ayudarle", "puntaje": 1 },
+              { "id": 16, "respuesta": "Trataría de calmarlo/a y le pediría que espere", "puntaje": 2 },
+              { "id": 16, "respuesta": "Buscaría a un colega o superior para que atienda la situación", "puntaje": 3 },
+              { "id": 16, "respuesta": "Me aseguraré de que reciba ayuda inmediata solicitando asistencia", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "17. ¿Cómo te comportas cuando debes realizar una tarea nueva que nunca has hecho antes?",
+            "respuestas": [
+              { "id": 17, "respuesta": "Evito la tarea y busco otra que ya conozca", "puntaje": 1 },
+              { "id": 17, "respuesta": "Intento hacerlo solo/a y espero lo mejor", "puntaje": 2 },
+              { "id": 17, "respuesta": "Pido ayuda o consejo para asegurarme de hacerlo correctamente", "puntaje": 3 },
+              { "id": 17, "respuesta": "Investigo y aprendo lo necesario antes de realizarla", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "18. ¿Cómo manejas tus emociones después de un turno especialmente difícil o estresante?",
+            "respuestas": [
+              { "id": 18, "respuesta": "Las ignoro y continúo con mi día", "puntaje": 1 },
+              { "id": 18, "respuesta": "Me siento abrumado/a y llevo ese estrés a casa", "puntaje": 2 },
+              { "id": 18, "respuesta": "Busco actividades que me ayuden a relajarme y desestresarme", "puntaje": 3 },
+              { "id": 18, "respuesta": "Hablo con colegas o seres queridos para procesar lo ocurrido", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "19. ¿Cómo te aseguras de mantener la dignidad y privacidad del paciente?",
+            "respuestas": [
+              { "id": 19, "respuesta": "No le doy mucha importancia a estos aspectos", "puntaje": 1 },
+              { "id": 19, "respuesta": "Hago lo mínimo necesario para mantener la privacidad", "puntaje": 2 },
+              { "id": 19, "respuesta": "Trato de respetar su privacidad en la mayoría de las situaciones", "puntaje": 3 },
+              { "id": 19, "respuesta": "Siempre me aseguro de respetar y proteger la dignidad y privacidad del paciente", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "20. ¿Qué harías si un paciente o familiar te agradece con un regalo?",
+            "respuestas": [
+              { "id": 20, "respuesta": "Aceptaría el regalo sin pensarlo", "puntaje": 1 },
+              { "id": 20, "respuesta": "Lo aceptaría para no ofenderles, pero me sentiría incómodo/a", "puntaje": 2 },
+              { "id": 20, "respuesta": "Agradecería el gesto, pero explicaría que no puedo aceptar regalos", "puntaje": 3 },
+              { "id": 20, "respuesta": "Rechazaría el regalo amablemente y les explicaría el porqué", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "21. ¿Cómo reaccionas si observas una violación de normas de seguridad por parte de un colega?",
+            "respuestas": [
+              { "id": 21, "respuesta": "Ignoro la situación para evitar conflictos", "puntaje": 1 },
+              { "id": 21, "respuesta": "Le hago una advertencia amistosa", "puntaje": 2 },
+              { "id": 21, "respuesta": "Informo a un supervisor de inmediato", "puntaje": 3 },
+              { "id": 21, "respuesta": "Lo confronto y aseguro que se corrija la situación", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "22. ¿Qué tan importante es para ti la ética en el cuidado de los pacientes?",
+            "respuestas": [
+              { "id": 22, "respuesta": "No es muy importante, prefiero centrarme en otros aspectos", "puntaje": 1 },
+              { "id": 22, "respuesta": "Es algo importante, pero no es lo principal", "puntaje": 2 },
+              { "id": 22, "respuesta": "Es muy importante y trato de actuar siempre éticamente", "puntaje": 3 },
+              { "id": 22, "respuesta": "Es fundamental y guía todas mis decisiones y acciones", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "23. ¿Cómo actúas si un paciente pide un tratamiento que no es necesario?",
+            "respuestas": [
+              { "id": 23, "respuesta": "Accedo a la petición del paciente para evitar confrontaciones", "puntaje": 1 },
+              { "id": 23, "respuesta": "Le explico brevemente por qué no es necesario", "puntaje": 2 },
+              { "id": 23, "respuesta": "Le informo detalladamente por qué no es necesario y ofrezco alternativas", "puntaje": 3 },
+              { "id": 23, "respuesta": "Consulto con un médico y sigo las recomendaciones apropiadas", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "24. ¿Cómo manejas el aprendizaje de nuevas tecnologías y técnicas en tu campo?",
+            "respuestas": [
+              { "id": 24, "respuesta": "Me resulta difícil y prefiero los métodos tradicionales", "puntaje": 1 },
+              { "id": 24, "respuesta": "Aprendo solo/a cuando es absolutamente necesario", "puntaje": 2 },
+              { "id": 24, "respuesta": "Busco activamente aprender y actualizarme con nuevas tecnologías y técnicas", "puntaje": 3 },
+              { "id": 24, "respuesta": "Estoy entusiasmado/a y me esfuerzo continuamente por aprender", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "25. ¿Cómo reaccionas si un colega te pide ayuda con una tarea difícil?",
+            "respuestas": [
+              { "id": 25, "respuesta": "Rehuso ayudar porque tengo mis propias tareas", "puntaje": 1 },
+              { "id": 25, "respuesta": "Ayudo si tengo tiempo disponible", "puntaje": 2 },
+              { "id": 25, "respuesta": "Siempre trato de ayudar cuando me es posible", "puntaje": 3 },
+              { "id": 25, "respuesta": "Ofrezco mi ayuda de inmediato y con disposición", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "26. ¿Qué tan importante es para ti la formación continua en tu campo?",
+            "respuestas": [
+              { "id": 26, "respuesta": "No es muy importante, prefiero concentrarme en la experiencia práctica", "puntaje": 1 },
+              { "id": 26, "respuesta": "Es importante, pero no siempre es posible participar en formaciones", "puntaje": 2 },
+              { "id": 26, "respuesta": "Es muy importante y trato de participar en todas las oportunidades de formación", "puntaje": 3 },
+              { "id": 26, "respuesta": "Es esencial y siempre busco formas de continuar aprendiendo y mejorando", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "27. ¿Cómo actúas si observas que un colega está sobrecargado de trabajo?",
+            "respuestas": [
+              { "id": 27, "respuesta": "No intervengo porque tengo mis propias responsabilidades", "puntaje": 1 },
+              { "id": 27, "respuesta": "Le ofrezco mi ayuda solo si no afecta mis tareas", "puntaje": 2 },
+              { "id": 27, "respuesta": "Ofrezco mi ayuda para aliviar su carga de trabajo", "puntaje": 3 },
+              { "id": 27, "respuesta": "Involucro a otros colegas y supervisores para encontrar una solución conjunta", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "28. ¿Qué harías si un paciente te cuenta algo en confidencia que podría afectar su salud?",
+            "respuestas": [
+              { "id": 28, "respuesta": "Respetaría su confidencia y no haría nada", "puntaje": 1 },
+              { "id": 28, "respuesta": "Trataría de convencer al paciente de que informe al médico", "puntaje": 2 },
+              { "id": 28, "respuesta": "Informaría al médico sin decirle al paciente", "puntaje": 3 },
+              { "id": 28, "respuesta": "Le explicaría al paciente la importancia de compartir esta información y buscaría su consentimiento para informar al médico", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "29. ¿Cómo manejas situaciones en las que te sientes abrumado/a por el trabajo?",
+            "respuestas": [
+              { "id": 29, "respuesta": "Me agobio y me cuesta seguir adelante", "puntaje": 1 },
+              { "id": 29, "respuesta": "Trato de mantener la calma, pero a veces no lo logro", "puntaje": 2 },
+              { "id": 29, "respuesta": "Organizo y priorizo mis tareas para gestionar mejor mi tiempo", "puntaje": 3 },
+              { "id": 29, "respuesta": "Busco apoyo y consejo de colegas o supervisores", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "30. ¿Qué tan importante es para ti la puntualidad en el trabajo?",
+            "respuestas": [
+              { "id": 30, "respuesta": "No es muy importante, mientras cumpla con mis tareas", "puntaje": 1 },
+              { "id": 30, "respuesta": "Es importante, pero a veces llego tarde", "puntaje": 2 },
+              { "id": 30, "respuesta": "Es muy importante y siempre trato de ser puntual", "puntaje": 3 },
+              { "id": 30, "respuesta": "Es esencial y siempre soy puntual", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "31. ¿Cómo actúas si te encuentras con un paciente que no habla tu idioma?",
+            "respuestas": [
+              { "id": 31, "respuesta": "Intento comunicarme con gestos y palabras básicas", "puntaje": 1 },
+              { "id": 31, "respuesta": "Busco a alguien que pueda ayudarme a traducir", "puntaje": 2 },
+              { "id": 31, "respuesta": "Uso herramientas de traducción disponibles para comunicarme", "puntaje": 3 },
+              { "id": 31, "respuesta": "Aseguro una comunicación efectiva buscando un traductor profesional", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "32. ¿Qué harías si notas que un paciente está deprimido o ansioso?",
+            "respuestas": [
+              { "id": 32, "respuesta": "Ignoro la situación y me enfoco en las tareas médicas", "puntaje": 1 },
+              { "id": 32, "respuesta": "Intento distraer al paciente con conversaciones casuales", "puntaje": 2 },
+              { "id": 32, "respuesta": "Le escucho y trato de ofrecer apoyo emocional", "puntaje": 3 },
+              { "id": 32, "respuesta": "Notifico a un profesional especializado para que le brinde la ayuda adecuada", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "33. ¿Cómo manejas la relación con los familiares de los pacientes?",
+            "respuestas": [
+              { "id": 33, "respuesta": "Mantengo la relación estrictamente profesional y distante", "puntaje": 1 },
+              { "id": 33, "respuesta": "Interactúo solo cuando es necesario", "puntaje": 2 },
+              { "id": 33, "respuesta": "Trato de mantener una relación cordial y respetuosa", "puntaje": 3 },
+              { "id": 33, "respuesta": "Establezco una comunicación abierta y empática", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "34. ¿Qué harías si un paciente se desmaya inesperadamente?",
+            "respuestas": [
+              { "id": 34, "respuesta": "Entro en pánico y busco ayuda inmediata", "puntaje": 1 },
+              { "id": 34, "respuesta": "Intento reanimarlo/a sin seguir un protocolo", "puntaje": 2 },
+              { "id": 34, "respuesta": "Sigo el protocolo de emergencias de la institución", "puntaje": 3 },
+              { "id": 34, "respuesta": "Actúo calmadamente siguiendo el protocolo y solicito asistencia inmediata", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "35. ¿Cómo manejas los errores que cometes en el trabajo?",
+            "respuestas": [
+              { "id": 35, "respuesta": "Trato de ocultarlos para evitar problemas", "puntaje": 1 },
+              { "id": 35, "respuesta": "Me siento muy mal, pero no sé cómo corregirlos", "puntaje": 2 },
+              { "id": 35, "respuesta": "Reconozco el error y busco soluciones para corregirlo", "puntaje": 3 },
+              { "id": 35, "respuesta": "Informo inmediatamente y aprendo del error para evitarlo en el futuro", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "36. ¿Qué importancia le das a la documentación adecuada de los cuidados y tratamientos?",
+            "respuestas": [
+              { "id": 36, "respuesta": "No es muy importante, lo principal es el cuidado directo", "puntaje": 1 },
+              { "id": 36, "respuesta": "Es importante, pero no siempre tengo tiempo para documentar", "puntaje": 2 },
+              { "id": 36, "respuesta": "Es muy importante y trato de documentar todo con precisión", "puntaje": 3 },
+              { "id": 36, "respuesta": "Es esencial y siempre aseguro que la documentación sea precisa y completa", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "37. ¿Cómo te aseguras de que las necesidades básicas de los pacientes estén siempre cubiertas?",
+            "respuestas": [
+              { "id": 37, "respuesta": "Confío en que otros cuidadores lo harán", "puntaje": 1 },
+              { "id": 37, "respuesta": "Solo me ocupo de estas necesidades si tengo tiempo disponible", "puntaje": 2 },
+              { "id": 37, "respuesta": "Hago un esfuerzo consciente para verificar estas necesidades regularmente", "puntaje": 3 },
+              { "id": 37, "respuesta": "Establezco una rutina para asegurarme de que todas las necesidades básicas estén cubiertas", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "38. ¿Cómo manejas las diferencias culturales de los pacientes en el cuidado diario?",
+            "respuestas": [
+              { "id": 38, "respuesta": "Trato a todos los pacientes de la misma manera, sin importar las diferencias culturales", "puntaje": 1 },
+              { "id": 38, "respuesta": "Me esfuerzo por adaptarme a sus necesidades culturales solo si es muy evidente", "puntaje": 2 },
+              { "id": 38, "respuesta": "Hago un esfuerzo por comprender y respetar sus diferencias culturales", "puntaje": 3 },
+              { "id": 38, "respuesta": "Busco activamente información sobre sus antecedentes culturales para proporcionar un mejor cuidado", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "39. ¿Qué harías si un paciente se niega a tomar un medicamento necesario?",
+            "respuestas": [
+              { "id": 39, "respuesta": "Insisto hasta que lo acepte", "puntaje": 1 },
+              { "id": 39, "respuesta": "Le informo de los posibles riesgos y dejo que decida", "puntaje": 2 },
+              { "id": 39, "respuesta": "Intento comprender sus razones y le explico la importancia del medicamento", "puntaje": 3 },
+              { "id": 39, "respuesta": "Notifico al médico y sigo sus recomendaciones para proceder", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "40. ¿Cómo actúas si un paciente se muestra agresivo verbalmente?",
+            "respuestas": [
+              { "id": 40, "respuesta": "Le respondo de la misma manera", "puntaje": 1 },
+              { "id": 40, "respuesta": "Ignoro sus comentarios y continúo con mi trabajo", "puntaje": 2 },
+              { "id": 40, "respuesta": "Trato de calmarlo/a y entender la causa de su agresividad", "puntaje": 3 },
+              { "id": 40, "respuesta": "Busco ayuda de un superior o de seguridad si es necesario", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "41. ¿Qué harías si un colega se atribuye el mérito de tu trabajo?",
+            "respuestas": [
+              { "id": 41, "respuesta": "No hago nada para evitar conflictos", "puntaje": 1 },
+              { "id": 41, "respuesta": "Le hablo en privado y le pido que reconozca mi trabajo", "puntaje": 2 },
+              { "id": 41, "respuesta": "Informo a un supervisor sobre la situación", "puntaje": 3 },
+              { "id": 41, "respuesta": "Discuto el problema abiertamente en una reunión de equipo", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "42. ¿Cómo manejas la confidencialidad de la información del paciente?",
+            "respuestas": [
+              { "id": 42, "respuesta": "Comparto la información solo con colegas de confianza", "puntaje": 1 },
+              { "id": 42, "respuesta": "Trato de mantener la confidencialidad, pero a veces comparto detalles sin querer", "puntaje": 2 },
+              { "id": 42, "respuesta": "Sigo las políticas de confidencialidad de la institución", "puntaje": 3 },
+              { "id": 42, "respuesta": "Me aseguro de mantener la confidencialidad en todas las circunstancias y educar a otros sobre su importancia", "puntaje": 4 }
+            ]
+          },{
+            "pregunta": "43. ¿Qué harías si un paciente te agradece con un regalo costoso?",
+            "respuestas": [
+              { "id": 43, "respuesta": "Lo acepto agradecidamente", "puntaje": 1 },
+              { "id": 43, "respuesta": "Lo acepto pero informo a mi supervisor", "puntaje": 2 },
+              { "id": 43, "respuesta": "Rechazo educadamente el regalo", "puntaje": 3 },
+              { "id": 43, "respuesta": "Rechazo el regalo y explico la política de la institución sobre regalos", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "44. ¿Cómo manejas situaciones de conflicto con un colega?",
+            "respuestas": [
+              { "id": 44, "respuesta": "Evito el conflicto y no hago nada", "puntaje": 1 },
+              { "id": 44, "respuesta": "Discuto el problema abiertamente con el colega", "puntaje": 2 },
+              { "id": 44, "respuesta": "Busco mediación de un superior", "puntaje": 3 },
+              { "id": 44, "respuesta": "Intento resolver el conflicto de manera profesional y respetuosa", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "45. ¿Cómo te aseguras de que un paciente está entendiendo las instrucciones médicas que le das?",
+            "respuestas": [
+              { "id": 45, "respuesta": "Le doy las instrucciones una vez y espero que las entienda", "puntaje": 1 },
+              { "id": 45, "respuesta": "Le pido que repita las instrucciones para verificar su comprensión", "puntaje": 2 },
+              { "id": 45, "respuesta": "Le proporciono las instrucciones por escrito", "puntaje": 3 },
+              { "id": 45, "respuesta": "Utilizo métodos variados, incluyendo demostraciones y explicaciones detalladas", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "46. ¿Qué importancia le das al trabajo en equipo en tu rol?",
+            "respuestas": [
+              { "id": 46, "respuesta": "Prefiero trabajar solo, no es muy importante", "puntaje": 1 },
+              { "id": 46, "respuesta": "Es importante, pero puedo trabajar solo si es necesario", "puntaje": 2 },
+              { "id": 46, "respuesta": "Es muy importante para mí y trato de colaborar siempre que puedo", "puntaje": 3 },
+              { "id": 46, "respuesta": "Es esencial y siempre busco formas de mejorar la colaboración", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "47. ¿Cómo manejas las críticas constructivas de tus supervisores?",
+            "respuestas": [
+              { "id": 47, "respuesta": "Las ignoro y sigo trabajando a mi manera", "puntaje": 1 },
+              { "id": 47, "respuesta": "Las escucho pero no siempre las aplico", "puntaje": 2 },
+              { "id": 47, "respuesta": "Las tomo en cuenta y trato de mejorar", "puntaje": 3 },
+              { "id": 47, "respuesta": "Las valoro mucho y busco activamente implementarlas para mejorar", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "48. ¿Qué harías si un paciente rechaza tu ayuda en una tarea que no puede hacer solo?",
+            "respuestas": [
+              { "id": 48, "respuesta": "Lo dejo solo y no insisto", "puntaje": 1 },
+              { "id": 48, "respuesta": "Le explico por qué es importante que acepte mi ayuda", "puntaje": 2 },
+              { "id": 48, "respuesta": "Busco otra forma de ayudar sin que se sienta incómodo", "puntaje": 3 },
+              { "id": 48, "respuesta": "Le ofrezco alternativas y trato de que entienda la necesidad de aceptar ayuda", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "49. ¿Cómo manejas situaciones en las que necesitas tomar decisiones rápidas bajo presión?",
+            "respuestas": [
+              { "id": 49, "respuesta": "Me siento abrumado y me cuesta tomar decisiones", "puntaje": 1 },
+              { "id": 49, "respuesta": "Tomo decisiones rápidas, pero no siempre son las mejores", "puntaje": 2 },
+              { "id": 49, "respuesta": "Evaluo rápidamente la situación y tomo una decisión informada", "puntaje": 3 },
+              { "id": 49, "respuesta": "Mantengo la calma y sigo protocolos establecidos para tomar decisiones acertadas", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "50. ¿Qué harías si un paciente con una enfermedad contagiosa necesita tu atención?",
+            "respuestas": [
+              { "id": 50, "respuesta": "Me niego a atenderlo por miedo a contagiarme", "puntaje": 1 },
+              { "id": 50, "respuesta": "Lo atiendo pero con precaución mínima", "puntaje": 2 },
+              { "id": 50, "respuesta": "Sigo las medidas de protección recomendadas para atenderlo", "puntaje": 3 },
+              { "id": 50, "respuesta": "Aplico estrictamente todos los protocolos de seguridad y protección", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "51. ¿Cómo te aseguras de mantenerte actualizado/a con los últimos avances en tu campo?",
+            "respuestas": [
+              { "id": 51, "respuesta": "No presto mucha atención a los avances", "puntaje": 1 },
+              { "id": 51, "respuesta": "Leo artículos o noticias ocasionalmente", "puntaje": 2 },
+              { "id": 51, "respuesta": "Participo en cursos y talleres regularmente", "puntaje": 3 },
+              { "id": 51, "respuesta": "Estoy continuamente buscando información y participando en eventos formativos", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "52. ¿Cómo actúas si un paciente se muestra insatisfecho con tu atención?",
+            "respuestas": [
+              { "id": 52, "respuesta": "Ignoro sus comentarios y continúo con mi trabajo", "puntaje": 1 },
+              { "id": 52, "respuesta": "Le escucho pero no hago cambios", "puntaje": 2 },
+              { "id": 52, "respuesta": "Trato de entender sus preocupaciones y mejorar mi atención", "puntaje": 3 },
+              { "id": 52, "respuesta": "Le ofrezco una solución y busco mejorar su experiencia", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "53. ¿Qué harías si te piden realizar una tarea para la cual no te sientes capacitado/a?",
+            "respuestas": [
+              { "id": 53, "respuesta": "Acepto la tarea sin decir nada", "puntaje": 1 },
+              { "id": 53, "respuesta": "Intento hacer la tarea lo mejor que puedo", "puntaje": 2 },
+              { "id": 53, "respuesta": "Solicito ayuda o capacitación para realizar la tarea correctamente", "puntaje": 3 },
+              { "id": 53, "respuesta": "Informo a mi supervisor de mi falta de capacitación y pido orientación", "puntaje": 4 }
+            ]
+          },{
+            "pregunta": "54. ¿Cómo actúas si un paciente necesita ayuda fuera de tu horario laboral?",
+            "respuestas": [
+              { "id": 54, "respuesta": "Le informo que no estoy en horario de trabajo y le recomiendo que busque atención médica de emergencia si es necesario", "puntaje": 1 },
+              { "id": 54, "respuesta": "Le ofrezco consejos generales pero le aconsejo que consulte a un profesional de la salud en caso de emergencia", "puntaje": 2 },
+              { "id": 54, "respuesta": "Me comunico con un servicio de atención de urgencias para obtener asesoramiento sobre cómo proceder", "puntaje": 3 },
+              { "id": 54, "respuesta": "Trato de brindar la mejor ayuda posible y si es necesario, lo acompaño al centro de salud más cercano", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "55. ¿Cómo priorizas tus tareas cuando tienes múltiples pacientes que necesitan atención inmediata?",
+            "respuestas": [
+              { "id": 55, "respuesta": "Atiendo a los pacientes en el orden en que fueron admitidos, sin importar la gravedad de su condición", "puntaje": 1 },
+              { "id": 55, "respuesta": "Priorizo según la gravedad de la condición médica de cada paciente", "puntaje": 2 },
+              { "id": 55, "respuesta": "Atiendo primero a los pacientes que considero más críticos independientemente del orden de llegada", "puntaje": 3 },
+              { "id": 55, "respuesta": "Evalúo constantemente la situación y priorizo en función de la necesidad médica y la disponibilidad de recursos", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "56. ¿Cómo te mantienes calmado/a y enfocado/a en situaciones de emergencia?",
+            "respuestas": [
+              { "id": 56, "respuesta": "Me dejo llevar por la adrenalina y actúo sin pensar demasiado", "puntaje": 1 },
+              { "id": 56, "respuesta": "Respiro profundamente y trato de mantener la calma", "puntaje": 2 },
+              { "id": 56, "respuesta": "Sigo protocolos establecidos y confío en mi formación para tomar decisiones rápidas y efectivas", "puntaje": 3 },
+              { "id": 56, "respuesta": "Mantengo la compostura y lidero el equipo para una respuesta coordinada y eficiente", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "57. ¿Cómo manejas a pacientes difíciles o desafiantes?",
+            "respuestas": [
+              { "id": 57, "respuesta": "Me molesto fácilmente y pierdo la paciencia con ellos", "puntaje": 1 },
+              { "id": 57, "respuesta": "Trato de ignorar su comportamiento y continuar con mi trabajo", "puntaje": 2 },
+              { "id": 57, "respuesta": "Intento entender las razones detrás de su comportamiento y abordarlo con empatía", "puntaje": 3 },
+              { "id": 57, "respuesta": "Utilizo técnicas de comunicación efectiva y establezco límites claros para manejar la situación", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "58. ¿Cómo garantizas la seguridad del paciente durante los procedimientos médicos?",
+            "respuestas": [
+              { "id": 58, "respuesta": "No presto mucha atención a la seguridad durante los procedimientos", "puntaje": 1 },
+              { "id": 58, "respuesta": "Sigo los procedimientos estándar, pero no siempre verifico todos los detalles", "puntaje": 2 },
+              { "id": 58, "respuesta": "Verifico cuidadosamente cada paso y me aseguro de seguir todas las precauciones de seguridad", "puntaje": 3 },
+              { "id": 58, "respuesta": "Anticipo posibles riesgos y tomo medidas preventivas para garantizar la seguridad del paciente en todo momento", "puntaje": 4 }
+            ]
+          },{
+            "pregunta": "59. ¿Qué harías si un paciente se muestra reacio a seguir el plan de tratamiento prescrito por el médico?",
+            "respuestas": [
+              { "id": 59, "respuesta": "Insisto en que siga el plan sin tener en cuenta sus preocupaciones", "puntaje": 1 },
+              { "id": 59, "respuesta": "Escucho sus preocupaciones y trato de entender sus razones para la reticencia", "puntaje": 2 },
+              { "id": 59, "respuesta": "Le ofrezco alternativas dentro del plan de tratamiento para adaptarlo a sus necesidades y preferencias", "puntaje": 3 },
+              { "id": 59, "respuesta": "Trabajo con el paciente para identificar y abordar las barreras que lo impiden seguir el plan, y busco soluciones juntos", "puntaje": 4 }
+            ]
+          },
+          {
+            "pregunta": "60. ¿Cómo te mantienes actualizado/a sobre las mejores prácticas en el cuidado de pacientes?",
+            "respuestas": [
+              { "id": 60, "respuesta": "No me preocupo por mantenerme actualizado/a", "puntaje": 1 },
+              { "id": 60, "respuesta": "Leo ocasionalmente sobre temas relacionados con la atención médica", "puntaje": 2 },
+              { "id": 60, "respuesta": "Participo en cursos de formación continua y asisto a conferencias sobre enfermería", "puntaje": 3 },
+              { "id": 60, "respuesta": "Me comprometo activamente en la investigación y la colaboración con colegas para estar al tanto de las últimas tendencias en el cuidado de pacientes", "puntaje": 4 }
+            ]
+          }
+        ],
+        "reglas_aceptacion": [{ "PuntajeMin": 100 }]
+      },
+      {
+        "nombre": "Prueba de Aptitud",
+        "instrucciones": "Esta prueba evalúa tus habilidades y conocimientos relacionados con el campo de la enfermería y generales. Lee cada pregunta cuidadosamente y elige la opción que consideres más apropiada. Cada respuesta tiene un puntaje asignado. ¡Buena suerte!",
         "preguntas": [
           {
             "pregunta": "¿Cuál es la función principal de un enfermero/a?",

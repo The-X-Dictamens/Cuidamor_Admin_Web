@@ -84,7 +84,7 @@
 
         <%if(documentos.comprobante == null){%>
             
-            <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=comprobante" method="post" enctype="multipart/form-data">
+            <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=comprobante_domincilio" method="post" enctype="multipart/form-data">
                 <input type="file" name="documento">
                 <button type="submit">Subir</button>
             </form>
@@ -94,6 +94,28 @@
     </div>
 
 
+    <h4>Pruebas psicometricas</h4>
+
+    <%if(pruebas.length == 0){%>
+        <p>Ahun no se ha aplicado la prueba</p>
+        <br>
+        <br>
+        <a href="/PruebaPsico?id=<%=empleado[0].id_emp%>"> 
+            <button>Aplicar prueba</button>
+        </a>
+        <br>
+        <br>
+    <%}else{%>
+        <p>Resultado de la prueba: <%= pruebas[0].punt_pru%></p>
+        <br>
+        <p>Estado: <%= pruebas[0].est_prue%></p>
+        <a href="/ReaplicarPruebaPsico?id=<%=empleado[0].id_emp%>">
+            <button>Reaplicar Prueba</button>
+        </a>
+    <%}%>
+
+ 
+    
     <div>
         
 

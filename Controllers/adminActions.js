@@ -136,22 +136,19 @@ exports.verEmpleado = async (req, res) => {
         try {
             let id = req.query.id;
             let empleado = await query("SELECT e.id_emp, e.nom_emp, e.pat_emp, e.mat_emp, e.fot_emp, e.tel_emp, e.est_emp, da.*, d.* FROM empleado e JOIN datos_acceso da ON e.id_datacc = da.id_datacc JOIN direccion d ON e.id_dir = d.id_dir WHERE e.id_emp = ?", [id]);
+            let pruebas = await query("SELECT * FROM pruebas WHERE id_emp = ? ",[id]);
             let perfil = await query("SELECT * FROM perfil_profecional WHERE id_emp = ?", [id]);
-            console.log(perfil);
-            console.log(empleado);
-
+            
+          
             //urls de las fotos de los documenstos
             let comprobante = await cloudController.getUrl(perfil[0].comdom_prof);
             let ine = await cloudController.getUrl(perfil[0].ine_prof);
             let certificados = await cloudController.getUrl(perfil[0].cert_prof);
-
             let documentos = {comprobante,ine,certificados};
 
-            console.log(documentos);
+            
 
-
-
-            res.render("Empleado", { empleado: empleado, documentos: documentos});
+            res.render("Empleado", { empleado: empleado, documentos: documentos, pruebas: pruebas});
 
         } catch (err) {
             console.error(err);
@@ -210,13 +207,13 @@ exports.subirDocumento = async (req, res) => {
     try {
       let id = req.query.id;
       let tipo = req.query.tipo;
-      let documento = req.file;
-      console.log(id, tipo, documento);
+      
 
       try{
-        let name = documento.fieldname + "-" + id + "." + documento.originalname.split(".").pop();
+        let documento = req.file;
+        let name = tipo + "_" + id + "." + documento.originalname.split(".").pop();
         switch (tipo) {
-          case "comprobante":
+          case "comprobante_domincilio":
             await query("UPDATE perfil_profecional SET comdom_prof = ? WHERE id_emp = ?", [name, id]);
             await cloudController.upload(documento, name);
             break;
@@ -230,8 +227,6 @@ exports.subirDocumento = async (req, res) => {
             break;
         }
         res.redirect("/Empleado?id="+id);
-
-
       }catch(err){
         console.error(err);
       }

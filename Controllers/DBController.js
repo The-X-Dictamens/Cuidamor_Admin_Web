@@ -1,6 +1,7 @@
 const mysql2 = require('mysql2');
 const fs = require('fs');
 
+
 const coneccion = mysql2.createConnection({
     host: 'dictamens-cuidamor.mysql.database.azure.com', 
     user: 'Dsj3392',  
@@ -9,6 +10,16 @@ const coneccion = mysql2.createConnection({
     port: 3306,
     ssl:{ca:fs.readFileSync(__dirname + '/../env/DigiCertGlobalRootCA.crt.pem'), rejectUnauthorized: false},
 });
+
+/*
+const coneccion = mysql2.createConnection({
+    host: 'localhost', 
+    user: 'root',  
+    password: '11608041211',
+    database: 'cuidamor_users',
+    port: 3306,
+});
+*/
 
 coneccion.connect((err) => {
     if(err){

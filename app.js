@@ -44,5 +44,5 @@ app.use(function(req, res, next) {
 
 
 app.listen(PORT, ()=>{
-    console.log('SERVER UP runnung in http://localhost:'+ PORT)
+    console.log('El servidor esta corriendo en http://localhost:'+ PORT)
 })

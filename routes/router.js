@@ -44,10 +44,16 @@ router.get('/AceptarEmpleado',adminActions.aceptarSolicitud);
 router.get('/ProcesarEmpleado',adminActions.procesarSolicitud);
 
 //pruebas psicometricas
-router.get('/aplicarPrueba',TestPsycometricController.getPrueba);
+router.get('/PruebaPsico',TestPsycometricController.getfirstPrueba);
+
+//prueba psicometrica
+router.get('/ReaplicarPruebaPsico',TestPsycometricController.getSecondPrueba);
 
 //ruta para obtener resultados de prueba psicometrica
-router.post('/enviarResultados',TestPsycometricController.getResultados);
+router.post('/enviarResultados',TestPsycometricController.setfirstResultados);
+
+//ruta para obtener resultados de prueba psicometrica
+router.post('/enviarReaplicacion',TestPsycometricController.setSecondResultados);
 
 
 

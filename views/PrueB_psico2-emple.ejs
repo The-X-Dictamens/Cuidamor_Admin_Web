@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Psicometrica</title>
+</head>
+<body>
+    <h1> Reaplicacion de Prueba Psicometrica</h1>
+
+    <form action="/enviarReaplicacion?id=<%=id%>&form=<%=numform%>" method="POST">
+
+        <h3><%= datos.nombre %></h3>
+        <br>
+        <p><%= datos.instrucciones %></p>
+        <br>
+
+        <% datos.preguntas.forEach(pregunta => { %>
+            <li><strong><%= pregunta.pregunta %></strong></li>
+            <ul>
+                <% pregunta.respuestas.forEach(respuesta => { %>
+                    <li>
+                        <input type="radio" id="<%= respuesta.puntaje %>" name="P<%= respuesta.id %>" value="<%= respuesta.puntaje %>" required>
+                        <label for="<%= respuesta.puntaje %>"><%= respuesta.respuesta %></label>
+                    </li>
+                <% }); %>
+            </ul>
+        <% }); %>
+
+        <button type="submit">Enviar</button>
+    
+    </form>
+</body>
+</html>

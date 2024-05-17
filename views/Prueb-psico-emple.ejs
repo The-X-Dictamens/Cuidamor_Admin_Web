@@ -19,10 +19,10 @@
             <li><strong><%= pregunta.pregunta %></strong></li>
             <ul>
                 <% pregunta.respuestas.forEach(respuesta => { %>
-                    
-                    <input type="radio" id="<%= respuesta.puntaje %>" name="P<%= respuesta.id %>" value="<%= respuesta.puntaje %>">
-                    <label for="<%= respuesta.puntaje %>"><%= respuesta.respuesta %></label><br>
-                    
+                    <li>
+                        <input type="radio" id="<%= respuesta.puntaje %>" name="P<%= respuesta.id %>" value="<%= respuesta.puntaje %>" required>
+                        <label for="<%= respuesta.puntaje %>"><%= respuesta.respuesta %></label>
+                    </li>
                 <% }); %>
             </ul>
         <% }); %>

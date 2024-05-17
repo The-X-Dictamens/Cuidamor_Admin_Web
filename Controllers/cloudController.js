@@ -56,7 +56,7 @@ exports.getUrl = async function obtenerEnlacePublico(name) {
       // Generar un enlace de acceso público al archivo
       const [url] = await bucket.file(name).getSignedUrl({
         action: 'read',
-        expires: Date.now() + 15 * 60 * 1000, // Caducidad del enlace (en este caso, 15 minutos)
+        expires: Date.now() + 30 * 60 * 1000, // Caducidad del enlace (en este caso, 30 minutos)
       });
   
       //console.log('Enlace de acceso público al archivo:', url);
