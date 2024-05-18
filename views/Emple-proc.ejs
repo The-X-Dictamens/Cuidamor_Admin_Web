@@ -79,19 +79,32 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="emple-proceso.html" class="active">
+            <a href="/Empleadosenproceso" class="active">
               <i class="bi bi-circle"></i><span>Empleados en proceso</span>
             </a>
           </li>
           <li>
-            <a href="Emple-acep.html">
+            <a href="/Empleadosaceptados" >
               <i class="bi bi-circle"></i><span>Empleados Aceptados</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Empleadosrechazado" >
+              <i class="bi bi-circle"></i><span>Empleados Rechazados</span>
             </a>
           </li>
         </ul>
       </li><!-- End Tables Nav -->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/peticiones">
+          <i class="bi bi-people"></i>
+          <span>Peticiones</span>
+        </a>
+      </li>
+
   </aside><!-- End Sidebar-->
+  
 
   <main id="main" class="main">
 
@@ -102,8 +115,8 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Tablas </h5>
-              <p>Peticiones Empleados</p>
+              <h5 class="card-title">Solicitudes de Empleados</h5>
+              <p></p>
               
               <!-- Botón para abrir el modal -->
               <div class="d-flex justify-content-start mb-3">
@@ -213,7 +226,7 @@
                                 </div>
                                 <div class="form-group">
                                   <label for="cedula_profesional">Número de Cédula Profesional:</label>
-                                  <input type="text" name="cedula_profesional" class="form-control" id="cedula_profesional" required>
+                                  <input type="number" name="cedula_profesional" class="form-control" id="cedula_profesional" required>
                                 </div>
                                 <div class="form-group">
                                   <label for="puesto">Tipo de Puesto:</label>
@@ -250,146 +263,22 @@
                 </thead>
                 
                 <tbody>
-                  <tr>
-                    <td>Unity</td>
-                    <td>Pugh</td>
-                    <td>unity.pugh@example.com</td>
-                    <td>(555) 123-4567</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                  </tr>
-                <tr>
-                    <td>Theodore</td>
-                    <td>Duran</td>
-                    <td>theodore.duran@example.com</td>
-                    <td>(555) 987-6543</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Kylie</td>
-                    <td>Bishop</td>
-                    <td>kylie.bishop@example.com</td>
-                    <td>(555) 234-5678</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Willow</td>
-                    <td>Gilliam</td>
-                    <td>willow.gilliam@example.com</td>
-                    <td>(555) 345-6789</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Blossom</td>
-                    <td>Dickerson</td>
-                    <td>blossom.dickerson@example.com</td>
-                    <td>(555) 456-7890</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Elliott</td>
-                    <td>Snyder</td>
-                    <td>elliott.snyder@example.com</td>
-                    <td>(555) 567-8901</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Castor</td>
-                    <td>Pugh</td>
-                    <td>castor.pugh@example.com</td>
-                    <td>(555) 678-9012</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Pearl</td>
-                    <td>Carlson</td>
-                    <td>pearl.carlson@example.com</td>
-                    <td>(555) 789-0123</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Deirdre</td>
-                    <td>Bridges</td>
-                    <td>deirdre.bridges@example.com</td>
-                    <td>(555) 890-1234</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Daniel</td>
-                    <td>Baldwin</td>
-                    <td>daniel.baldwin@example.com</td>
-                    <td>(555) 901-2345</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Emily</td>
-                    <td>Rodriguez</td>
-                    <td>emily.rodriguez@example.com</td>
-                    <td>(555) 123-5678</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Michael</td>
-                    <td>Smith</td>
-                    <td>michael.smith@example.com</td>
-                    <td>(555) 234-6789</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Olivia</td>
-                    <td>Johnson</td>
-                    <td>olivia.johnson@example.com</td>
-                    <td>(555) 345-7890</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>William</td>
-                    <td>Brown</td>
-                    <td>william.brown@example.com</td>
-                    <td>(555) 456-8901</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Emma</td>
-                    <td>Jones</td>
-                    <td>emma.jones@example.com</td>
-                    <td>(555) 567-9012</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Lucas</td>
-                    <td>Garcia</td>
-                    <td>lucas.garcia@example.com</td>
-                    <td>(555) 678-0123</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Charlotte</td>
-                    <td>Miller</td>
-                    <td>charlotte.miller@example.com</td>
-                    <td>(555) 789-1234</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Alexander</td>
-                    <td>Martinez</td>
-                    <td>alexander.martinez@example.com</td>
-                    <td>(555) 890-2345</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>Sophia</td>
-                    <td>Davis</td>
-                    <td>sophia.davis@example.com</td>
-                    <td>(555) 901-3456</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
-                <tr>
-                    <td>David</td>
-                    <td>Anderson</td>
-                    <td>david.anderson@example.com</td>
-                    <td>(555) 012-4567</td>
-                    <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm">Ver más</a></td>
-                </tr>
+                  
+                  <% empleados.forEach(function(empleado) { %>
+                    
+                    <% if(empleado.est_emp == 'Proceso'){ %>
+                      <tr>
+                        <td><%= empleado.nom_emp %></td>
+                        <td><%= empleado.pat_emp + " " + empleado.mat_emp %></td>
+                        <td><%= empleado.cor_datacc %></td>
+                        <td><%= empleado.tel_emp %></td>
+                        <td class="text-center"><a href="/Empleado?id=<%= empleado.id_emp %>" class="btn btn-outline-primary btn-sm">Ver más</a></td>
+                      </tr>
+                    <% } %>
+                  
+                  <% }); %>
+                    
+                
                 </tbody>
             </table>
             
@@ -407,16 +296,8 @@
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
+    
+    
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

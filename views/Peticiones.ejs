@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cuidamor</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap y otros recursos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Scripts para Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a  class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Cuidamor</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+        
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Usuarios.html">
+          <i class="bi bi-people"></i>
+          <span>Usuarios</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      
+      <li class="nav-item">
+        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/Empleadosenproceso" class="active">
+              <i class="bi bi-circle"></i><span>Empleados en proceso</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Empleadosaceptados" >
+              <i class="bi bi-circle"></i><span>Empleados Aceptados</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Empleadosrechazado" >
+              <i class="bi bi-circle"></i><span>Empleados Rechazados</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/peticiones">
+          <i class="bi bi-people"></i>
+          <span>Peticiones</span>
+        </a>
+      </li>
+
+  </aside><!-- End Sidebar-->
+
+  <div class="container">
+    <h2 class="text-center mb-4"><strong>Seguimiento de Servicios</strong></h2>
+
+    <!-- Tarjeta para seguimiento -->
+    <div class="card tarjeta-mejorada">
+        <div class="card-body">
+
+            <div class="row">
+                <!-- Columna izquierda para Cliente y Paciente -->
+                <div class="col-md-6">
+                    <div class="informacion-cliente">
+                        <i class="fas fa-user icon"></i>
+                        <h5>Cliente</h5>
+                        <p><strong>Nombre:</strong> Pedro Hernández</p>
+                        <p><strong>Fecha de Solicitud:</strong> 25/04/2024</p>
+                        <p><strong>Descripción del Servicio:</strong> Solicitud para enfermero especializado.</p>
+                    </div>
+                </div>
+
+                <!-- Columna derecha para Empleado Asignado -->
+                <div class="col-md-6">
+                    <div class="informacion-empleado">
+                        <i class="fas fa-user-nurse icon"></i>
+                        <h5>Empleado Asignado</h5>
+                        <div class="img-placeholder"><i class="fas fa-user-nurse" style="font-size: 48px;color: #ccc;"></i></div>
+                        <p><strong>Nombre:</strong> Miguel Torres</p>
+                        <p><strong>Teléfono:</strong> 555-555-5555</p>
+                        <p><strong>Correo:</strong> miguel.torres@cuidamor.com</p>
+                        <p><strong>Tipo:</strong> Enfermero</p>
+                        <p><strong>Especialidad:</strong> Nefrología</p>
+                        <span><i class="fas fa-info-circle icon"></i> <strong>Estado:</strong> En proceso</span>
+                        <div class="estado-opciones">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cambiar Estado</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">En proceso</a></li>
+                                <li><a class="dropdown-item" href="#">Completado</a></li>
+                                <li><a class="dropdown-item" href="#">Cancelado</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-danger btn-sm mt-3">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+
+<!-- Code injected by live-server -->
+
+
+</body>
+
+</html>

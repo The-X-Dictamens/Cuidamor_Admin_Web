@@ -84,6 +84,33 @@ h6 {
   transition: all 0.4s;
 }
 
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background: #f14545; /* Cambiado a rojo */
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+  }
+  
+  .btn-danger {
+    color: #fff;
+    background-color: #f14545; /* Rojo */
+    border-color: #f14545; /* Rojo */
+  }
+  
+  .btn-danger:hover {
+    color: #fff;
+    background-color: #d63c3c; /* Rojo oscuro al pasar el ratón */
+    border-color: #d63c3c; /* Rojo oscuro al pasar el ratón */
+  }
+
+
 .back-to-top i {
   font-size: 24px;
   color: #fff;
@@ -387,7 +414,8 @@ h6 {
   /* Search Bar */
 }
 
-.header .toggle-sidebar-btn {
+.header .toggle-sidebar-
+ {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
@@ -1231,3 +1259,4 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
