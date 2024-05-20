@@ -262,20 +262,26 @@ exports.aceptarSolicitud = async (req, res) => {
   if (req.session.user) {
     try {
       let id = req.query.id;
+      let idacc = await query("SELECT id_datacc FROM empleado WHERE id_emp = ?", [id]);
+      
       await query("UPDATE empleado SET est_emp = 'Aceptado' WHERE id_emp = ?", [id]);
       //veo si la contraseña es null o ya tiene una
-      let data = await query("SELECT * FROM datos_acceso WHERE id_datacc = ?", [id]);
+      let data = await query("SELECT * FROM datos_acceso WHERE id_datacc = ?", [idacc[0].id_datacc]);
+
+      
+      
       if (data[0].pas_datacc == null) {
         //si no tiene contraseña se le envia un correo para con una contraseña generada aleatoreamente
         let correo = data[0].cor_datacc;
         let pass = generarPassword();
-        await query("UPDATE datos_acceso SET pas_datacc = ? WHERE id_datacc = ?", [pass, id]);
+        await query("UPDATE datos_acceso SET pas_datacc = ? WHERE id_datacc = ?", [pass, idacc[0].id_datacc]);
         await gmailController.sendEmail(correo, "Solicitud Aceptada", emailcreator.ActivacionCuenta(correo, pass, 1));
       }else{
         //si ya tiene contraseña (el creo solo su cuenta desde el software de cliente) se le envia nadamas la confirmacion
         let correo = data[0].cor_datacc;
         await gmailController.sendEmail(correo, "Solicitud Aceptada", emailcreator.ActivacionCuenta(correo, null, 2));
       }
+      
 
       res.redirect("/Empleadosaceptados");
     } catch (err) {
