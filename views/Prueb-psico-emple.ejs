@@ -1,34 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Psicometrica</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>Prueba Psicometrica</h1>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-start mb-3">
+            <a href="javascript:history.back()" class="btn btn-secondary">Volver</a>
+        </div>
+        <h1 class="text-center">Reaplicacion de Prueba Psicometrica</h1>
 
-    <form action="/enviarResultados?id=<%=id%>&form=<%=numform%>" method="POST">
+        <form id="psychometricTestForm" action="/enviarResultados?id=<%=id%>&form=<%=numform%>" method="POST" class="mt-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><%= datos.nombre %></h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><%= datos.instrucciones %></p>
+                    
+                    <% let sectionIndex = 0; %>
+                    <% datos.preguntas.forEach((pregunta, index) => { 
+                        if (index % 10 === 0) { 
+                            if (index !== 0) { %></div><% } %>
+                            <div class="section <%= index === 0 ? 'active' : '' %>" data-section-index="<%= sectionIndex %>">
+                            <% sectionIndex++; 
+                        } %>
+                                <li><strong><%= pregunta.pregunta %></strong></li>
+                                <ul class="list-unstyled mt-2">
+                                    <% pregunta.respuestas.forEach(respuesta => { %>
+                                        <li class="form-check">
+                                            <input class="form-check-input" type="radio" id="P<%= respuesta.id %>" name="P<%= respuesta.id %>" value="<%= respuesta.puntaje %>" required>
+                                            <label class="form-check-label" for="P<%= respuesta.id %>"><%= respuesta.respuesta %></label>
+                                        </li>
+                                    <% }); %>
+                                </ul>
+                    <% }); %>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <center>
+                    <button type="button" id="prevButton" class="btn btn-secondary" onclick="navigateSections(-1)">Anterior</button>
+                    <button type="button" id="nextButton" class="btn btn-primary" onclick="navigateSections(1)">Siguiente</button>
+                    <button type="submit" id="submitButton" class="btn btn-success d-none">Enviar</button>
+                    </center>
+                </div>
+            </div>
+        </form>
+    </div>
 
-        <h3><%= datos.nombre %></h3>
-        <br>
-        <p><%= datos.instrucciones %></p>
-        <br>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let currentSection = 0;
+        const sections = document.querySelectorAll('.section');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const submitButton = document.getElementById('submitButton');
 
-        <% datos.preguntas.forEach(pregunta => { %>
-            <li><strong><%= pregunta.pregunta %></strong></li>
-            <ul>
-                <% pregunta.respuestas.forEach(respuesta => { %>
-                    <li>
-                        <input type="radio" id="<%= respuesta.puntaje %>" name="P<%= respuesta.id %>" value="<%= respuesta.puntaje %>" required>
-                        <label for="<%= respuesta.puntaje %>"><%= respuesta.respuesta %></label>
-                    </li>
-                <% }); %>
-            </ul>
-        <% }); %>
+        function navigateSections(direction) {
+            sections[currentSection].classList.remove('active');
+            currentSection += direction;
 
-        <button type="submit">Enviar</button>
-    
-    </form>
+            if (currentSection < 0) {
+                currentSection = 0;
+            } else if (currentSection >= sections.length) {
+                currentSection = sections.length - 1;
+            }
+
+            sections[currentSection].classList.add('active');
+            updateButtons();
+        }
+
+        function updateButtons() {
+            if (currentSection === 0) {
+                prevButton.style.display = 'none';
+            } else {
+                prevButton.style.display = 'inline-block';
+            }
+
+            if (currentSection === sections.length - 1) {
+                nextButton.style.display = 'none';
+                submitButton.classList.remove('d-none');
+            } else {
+                nextButton.style.display = 'inline-block';
+                submitButton.classList.add('d-none');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateButtons();
+        });
+    </script>
 </body>
 </html>
