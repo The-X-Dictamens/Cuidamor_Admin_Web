@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cuidamor</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap y otros recursos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Scripts para Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+  <div class="container">
+    <!-- Tarjeta para seguimiento -->
+    <div class="card tarjeta-mejorada" style="margin-top:48px;">
+      <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="informacion-cliente"><i class="fas fa-user icon"></i>
+                    <h5>Datos Personales </h5>
+                    <p>Nombre: <%= empleado[0].nom_emp %></p>
+                    <p>Apellido: <%= empleado[0].pat_emp + empleado[0].mat_emp %></p>
+                    <p>Correo: <%= empleado[0].cor_datacc %></p>
+                    <p>Telefono: <%= empleado[0].tel_emp %></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="informacion-empleado"><i class="fas fa-user-nurse icon"></i>
+                    <h5>Dirección</h5>
+                    <p>Delegacion: <%= empleado[0].del_dir %></p>
+                    <p>Colonia: <%= empleado[0].col_dir %></p>
+                    <p>Calle: <%= empleado[0].calle_dir %></p>
+                    <p>Codigo Postal: <%= empleado[0].cp_dir %></p>                
+                </div>
+            </div>
+        </div>
+        <h3>Documentos:</h3>
+
+        <div>
+            <h4>ine</h4>
+            <iframe src="https://docs.google.com/viewer?url=<%= documentos.ine %>&embedded=true" width="100%" height="400px"></iframe>
+    
+            <%if(documentos.ine != null){%>
+                <a href="/EliminarDoc?id=<%=empleado[0].id_emp%>&doc=ine" > 
+                    <button>Eliminar</button> 
+                </a>
+            <%} %>
+    
+            <%if(documentos.ine == null){%>
+                <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=ine" method="post" enctype="multipart/form-data">
+                    <input type="file" name="documento">
+                    <button type="submit">Subir</button>
+                </form>
+            <%}%>
+        </div>
+        
+        <div>
+            <h4>Certificados</h4>
+            <iframe src="https://docs.google.com/viewer?url=<%= documentos.certificados %>&embedded=true" width="100%" height="400px"></iframe>
+    
+            <%if(documentos.certificados != null){%>
+                <a href="/EliminarDoc?id=<%=empleado[0].id_emp%>&doc=certificados" > 
+                    <button>Eliminar</button> 
+                </a>
+            <%} %>
+    
+            <%if(documentos.certificados == null){%>
+                <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=certificados" method="post" enctype="multipart/form-data">
+                    <input type="file" name="documento">
+                    <button type="submit">Subir</button>
+                </form>
+            <%}%>
+        </div>
+    
+        <div>
+            <h4>Comprobante de domicilio</h4>
+            <iframe src="https://docs.google.com/viewer?url=<%= documentos.comprobante %>&embedded=true" width="100%" height="400px"></iframe>
+    
+            <%if(documentos.comprobante != null){%>
+                <a href="/EliminarDoc?id=<%=empleado[0].id_emp%>&doc=comprobante" > 
+                    <button>Eliminar</button> 
+                </a>
+            <%} %>
+    
+            <%if(documentos.comprobante == null){%>
+                <form action="/SubirDoc?id=<%=empleado[0].id_emp%>&tipo=comprobante_domincilio" method="post" enctype="multipart/form-data">
+                    <input type="file" name="documento">
+                    <button type="submit">Subir</button>
+                </form>
+            <%}%>
+        </div>
+    
+        <h4>Pruebas psicometricas</h4>
+    
+        <%if(pruebas.length == 0){%>
+            <p>Ahun no se ha aplicado la prueba</p>
+            <br>
+            <br>
+            <a href="/PruebaPsico?id=<%=empleado[0].id_emp%>"> 
+                <button>Aplicar prueba</button>
+            </a>
+            <br>
+            <br>
+        <%}else{%>
+            <p>Resultado de la prueba: <%= pruebas[0].punt_pru %></p>
+            <br>
+            <p>Estado: <%= pruebas[0].est_prue %></p>
+            <a href="/ReaplicarPruebaPsico?id=<%=empleado[0].id_emp%>">
+                <button>Reaplicar Prueba</button>
+            </a>
+        <%}%>
+        
+        <div>
+            <%if(empleado[0].est_emp == "Proceso"){%>
+                <a href="/AceptarEmpleado?id=<%=empleado[0].id_emp%>"> 
+                    <button>Aceptar</button>
+                </a>
+                <a href="/RechazarEmpleado?id=<%=empleado[0].id_emp%>">
+                    <button>Rechazar</button> 
+                </a>
+            <%}%>
+    
+            <%if(empleado[0].est_emp == "Aceptado" || empleado[0].est_emp == "Rechazado"){%>
+                <a href="/ProcesarEmpleado?id=<%=empleado[0].id_emp%>"> 
+                    <button>Procesar</button>
+                </a>
+            <%}%>
+        </div>
+    
+    </div>
+  </div>
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
