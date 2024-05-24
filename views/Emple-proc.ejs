@@ -45,21 +45,28 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .header .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-
-    <div class="d-flex align-items-center justify-content-between">
-      <a  class="logo d-flex align-items-center">
+   <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top d-flex align-items-center">
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <a class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Cuidamor</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-        
-    </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
   <!-- ======= Sidebar ======= -->
@@ -252,6 +259,7 @@
                         <th>Apellido</th>
                         <th>Correo</th>
                         <th>Número</th>
+                        <th>tipo</th>
                         <th>Documentos</th>
                     </tr>
                 </thead>
@@ -266,6 +274,7 @@
                         <td><%= empleado.pat_emp + " " + empleado.mat_emp %></td>
                         <td><%= empleado.cor_datacc %></td>
                         <td><%= empleado.tel_emp %></td>
+                        <td><%= empleado.rol_datacc %></td>
                         <td class="text-center"><a href="/Empleado?id=<%= empleado.id_emp %>" class="btn btn-outline-primary btn-sm">Ver más</a></td>
                       </tr>
                     <% } %>
@@ -308,6 +317,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
 
 <!-- Code injected by live-server -->
