@@ -4,6 +4,7 @@ const query = promisify(coneccion.query).bind(coneccion);
 const cloudController = require("./cloudController");
 const gmailController = require("./gmailcontroller");
 const emailcreator = require("./EmailCreator");
+const bcryptjs = require('bcryptjs');
 const e = require("express");
 const { get } = require("http");
 
@@ -274,7 +275,8 @@ exports.aceptarSolicitud = async (req, res) => {
         //si no tiene contraseña se le envia un correo para con una contraseña generada aleatoreamente
         let correo = data[0].cor_datacc;
         let pass = generarPassword();
-        await query("UPDATE datos_acceso SET pas_datacc = ? WHERE id_datacc = ?", [pass, idacc[0].id_datacc]);
+        const passwordHash = await bcryptjs.hash(pass, 8);
+        await query("UPDATE datos_acceso SET pas_datacc = ? WHERE id_datacc = ?", [passwordHash, idacc[0].id_datacc]);
         await gmailController.sendEmail(correo, "Solicitud Aceptada", emailcreator.ActivacionCuenta(correo, pass, 1));
       }else{
         //si ya tiene contraseña (el creo solo su cuenta desde el software de cliente) se le envia nadamas la confirmacion

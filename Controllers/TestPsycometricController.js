@@ -94,6 +94,13 @@ exports.getSecondPrueba = async (req, res) => {
             
         let numform = randomNum();
 
+        //actualiza el estado a reaplicar y el puntaje a null
+        try{
+            let setpuntaje = await query('UPDATE pruebas SET est_prue = ? , punt_pru = ? WHERE (id_emp = ?);',['Reaplicando',null,id]);
+        }catch(err){
+            console.error(err);
+        }
+
         res.render('PrueB_psico2-emple',{datos: datos.pruebas[numform],id: id,numform: numform});
             
         } catch (err) {

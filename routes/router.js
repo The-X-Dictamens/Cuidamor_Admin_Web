@@ -65,9 +65,9 @@ router.use(function(req, res, next) {
 //manejo de errores
 router.use(function(err, req, res, next){
     res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
+    //res.locals.error = req.app.get('env') === 'development' ? err : {};
     res.status(err.status || 500);
-    res.send('Hubo algun error con los servicios por favor intente mas tarde');
+    res.send(err);
     console.log(err);
 });
 

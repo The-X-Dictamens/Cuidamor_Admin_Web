@@ -6,7 +6,7 @@ const coneccion = mysql2.createConnection({
     host: 'dictamens-cuidamor.mysql.database.azure.com', 
     user: 'Dsj3392',  
     password: 'X-Dictamens',
-    database: 'cuidamor_users',
+    database: 'cuidamor_users_unificado',
     port: 3306,
     ssl:{ca:fs.readFileSync(__dirname + '/../env/DigiCertGlobalRootCA.crt.pem'), rejectUnauthorized: false},
 });
@@ -14,11 +14,12 @@ const coneccion = mysql2.createConnection({
 const coneccion = mysql2.createConnection({
     host: 'localhost', 
     user: 'root',  
-    password: '11608041211',
-    database: 'cuidamor_users',
+    password: '',
+    database: 'cuidamor_users_unificado',
     port: 3306,
 });
 */
+
 
 coneccion.connect((err) => {
     if(err){
