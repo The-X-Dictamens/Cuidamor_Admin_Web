@@ -6,7 +6,7 @@
   "deplo": "node app.js",
   
     
-  "start": "npm install && npm deplo"
+  "start": "npm install && npm run deplo"
   
   },
   
